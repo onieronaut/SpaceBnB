@@ -1,0 +1,38 @@
+“The galaxy isn’t as far away as you think!”
+
+“Looking to get far far away? Let us help plan your next trip to another galaxy!”
+
+View Destination by:
+    
+    Terrain/Climate
+        Choose terrain/climate category from list
+        Choose planet from list in that category
+            Show starting cost to travel to planet
+            Show POI’s & wildlife on selected planet
+        Plan trip
+            Choose lodging
+            Choose rental transportation
+            Choose transportation to planet
+    
+    POI’s
+        Choose POI from list
+            Planet will automatically be selected based on chosen POI
+            Show other available POI’s on same planet
+            Show climate/terrain and wildlife for planet
+            Show starting cost to travel to planet
+        Plan trip
+            Choose lodging
+            Choose rental transportation
+            Choose transportation to planet
+    
+    Wildlife
+        Choose Wildlife from list
+            Show list of planets with selected wildlife
+            Select desired planet
+                Show climate/terrain for planet
+                Show available POI’s planet
+                Show starting cost to travel to planet
+        Plan trip
+            Choose lodging
+            Choose rental transportation
+            Choose transportation to planet
