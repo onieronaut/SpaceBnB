@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.carousel-caption-text {
+    background: rgba(0, 0, 0, 0.6); 
+    width: 400px;
+    height: 80px;
+    margin: auto;
+    padding: 9px;
+}
+
+#border {
+    background-color: orange;
+    margin: auto;
+    width: 250px;
+    height: 3px;
+}
+
+#down-arrow {
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
