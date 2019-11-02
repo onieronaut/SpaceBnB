@@ -14,10 +14,10 @@ let frozen  = {
     }
 }
 
-let tropical  = {
-    dropDown: $("#tropical"),
+let tropicalJungle  = {
+    dropDown: $("#tropicalJungle"),
     menu: {
-        icon: $("#tropicalPlanets"),
+        icon: $("#tropicalJunglePlanets"),
         hidden: false
     }
 }
@@ -30,7 +30,7 @@ let forrest  = {
     }
 }
 
-let selectArray = [desert, frozen, tropical, forrest]
+let selectArray = [desert, frozen, tropicalJungle, forrest]
 
 desert.dropDown.on("click", function(){
     if (desert.menu.hidden = true) {
@@ -40,8 +40,8 @@ desert.dropDown.on("click", function(){
     console.log("desert")
     frozen.menu.icon.hide();
     frozen.menu.hidden = true
-    tropical.menu.icon.hide();
-    tropical.menu.hidden = true
+    tropicalJungle.menu.icon.hide();
+    tropicalJungle.menu.hidden = true
     forrest.menu.icon.hide();
     forrest.menu.hidden = true
 })
@@ -54,17 +54,17 @@ frozen.dropDown.on("click", function(){
     }
     desert.menu.icon.hide();
     desert.menu.hidden = true
-    tropical.menu.icon.hide();
-    tropical.menu.hidden = true
+    tropicalJungle.menu.icon.hide();
+    tropicalJungle.menu.hidden = true
     forrest.menu.icon.hide();
     forrest.menu.hidden = true
 })
 
-tropical.dropDown.on("click", function(){
-    console.log("tropical")
-    if (tropical.menu.hidden = true) {
-        tropical.menu.icon.show();
-        tropical.menu.hidden = false;
+tropicalJungle.dropDown.on("click", function(){
+    console.log("tropicalJungle")
+    if (tropicalJungle.menu.hidden = true) {
+        tropicalJungle.menu.icon.show();
+        tropicalJungle.menu.hidden = false;
     }
     desert.menu.icon.hide();
     desert.menu.hidden = true
@@ -84,8 +84,8 @@ forrest.dropDown.on("click", function(){
     desert.menu.hidden = true
     frozen.menu.icon.hide();
     frozen.menu.hidden = true
-    tropical.menu.icon.hide();
-    tropical.menu.hidden = true
+    tropicalJungle.menu.icon.hide();
+    tropicalJungle.menu.hidden = true
 })
 
 $("#showAllBtn").on("click", function(){
