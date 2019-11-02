@@ -62,7 +62,12 @@ const vandor = {
     planet: "assets/images/planets/vandor/planet.png"
 }
 
-let planets = [dagobah, endor, felucia, geonosis, hoth, ilum, jakku, kashyyk, mandalore, scarif, tatooine, vandor];
+let frozenPlanets = [hoth, ilum, vandor];
+let desertPlanets = [tatooine, jakku, geonosis];
+let tropicalPlanets = [scarif, kashyyk, felucia];
+let forestPlanets = [endor, mandalore, dagobah];
+
+let planets = [frozenPlanets, desertPlanets, tropicalPlanets, forestPlanets];
 
 const millenniumFalcon = {
     name: "Millennium Falcon",
