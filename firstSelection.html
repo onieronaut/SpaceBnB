@@ -15,7 +15,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Planet Selection</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Search by Climate/Terrain
+                        Filter by Terrain
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" id="desert" href="#">Desert</a>
@@ -42,54 +42,83 @@
             </div>
         </div>
         <div class="row" id="desertPlanets">
-            <div class="col-sm text-center" style="margin: 3%;">                 <img src="assets/images/planets/tatooine/planet.png" alt="dagobah" class="img-thumbnail">
-                Tatooine
+            <div class="col-sm text-center" style="margin: 1%;">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                    <img src="assets/images/planets/tatooine/planet.png" alt="tatooine" class="img-thumbnail">
+                    Tatooine
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Modal Header</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Some text in the modal.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm text-center" style="margin: 3%;">                 <img src="assets/images/planets/jakku/planet.png" alt="dagobah" class="img-thumbnail">
+            <div class="col-sm text-center" style="margin: 1%;"> <img src="assets/images/planets/jakku/planet.png"
+                    alt="jakku" class="img-thumbnail">
                 Jakku
             </div>
-            <div class="col-sm text-center" style="margin: 3%;">                 <img src="assets/images/planets/geonosis/planet.png" alt="dagobah" class="img-thumbnail">
+            <div class="col-sm text-center" style="margin: 1%;"> <img src="assets/images/planets/geonosis/planet.png"
+                    alt="geonosis" class="img-thumbnail">
                 Geonosis
             </div>
         </div>
         <div class="row" id="frozenPlanets">
-            <div class="col-sm text-center" style="margin: 3%;">                 <img src="assets/images/planets/hoth/planet.png" alt="dagobah" class="img-thumbnail">
+            <div class="col-sm text-center" style="margin: 1%;"> <img src="assets/images/planets/hoth/planet.png"
+                    alt="hoth" class="img-thumbnail">
                 Hoth
             </div>
-            <div class="col-sm text-center" style="margin: 3%;">                 <img src="assets/images/planets/ilum/planet.png" alt="dagobah" class="img-thumbnail">
+            <div class="col-sm text-center" style="margin: 1%;"> <img src="assets/images/planets/ilum/planet.png"
+                    alt="ilum" class="img-thumbnail">
                 Ilum
             </div>
-            <div class="col-sm text-center" style="margin: 3%;">                 <img src="assets/images/planets/vandor/planet.png" alt="dagobah" class="img-thumbnail">
+            <div class="col-sm text-center" style="margin: 1%;"> <img src="assets/images/planets/vandor/planet.png"
+                    alt="vandor" class="img-thumbnail">
                 Vandor
             </div>
         </div>
         <div class="row" id="tropicalJunglePlanets">
-            <div class="col-sm text-center" style="margin: 3%;">                 <img src="assets/images/planets/scarif/planet.png" alt="dagobah" class="img-thumbnail">
+            <div class="col-sm text-center" style="margin: 1%;"> <img src="assets/images/planets/scarif/planet.png"
+                    alt="scarif" class="img-thumbnail">
                 Scarif
             </div>
-            <div class="col-sm text-center" style="margin: 3%;">
-                <img src="assets/images/planets/kashyyk/planet.png" alt="dagobah" class="img-thumbnail">
+            <div class="col-sm text-center" style="margin: 1%;">
+                <img src="assets/images/planets/kashyyk/planet.png" alt="kashyyk" class="img-thumbnail">
                 Kashyyk
             </div>
-            <div class="col-sm text-center" style="margin: 3%;">                 <img src="assets/images/planets/felucia/planet.png" alt="dagobah" class="img-thumbnail">
-                Felucia 
+            <div class="col-sm text-center" style="margin: 1%;"> <img src="assets/images/planets/felucia/planet.png"
+                    alt="felucia" class="img-thumbnail">
+                Felucia
             </div>
         </div>
         <div class="row" id="forrestPlanets">
-            <div class="col-sm text-center" style="margin: 3%;">
-                <img src="assets/images/planets/endor/planet.png" alt="dagobah" class="img-thumbnail">
+            <div class="col-sm text-center" style="margin: 1%;">
+                <img src="assets/images/planets/endor/planet.png" alt="endor" class="img-thumbnail">
                 Endor
             </div>
-            <div class="col-sm text-center" style="margin: 3%;">                 <img src="assets/images/planets/mandalore/planet.jpg" alt="dagobah" class="img-thumbnail">
+            <div class="col-sm text-center" style="margin: 1%;"> <img src="assets/images/planets/mandalore/planet.jpg"
+                    alt="mandalore" class="img-thumbnail">
                 Mandalore
             </div>
-            <div class="col-sm text-center" style="margin: 3%;">
+            <div class="col-sm text-center" style="margin: 1%;">
                 <img src="assets/images/planets/dagobah/planet.jpg" alt="dagobah" class="img-thumbnail">
                 Dagobah
             </div>
         </div>
         <div class="row">
-            <div class="col-sm text-center" style="margin: 3%;">
+            <div class="col-sm text-center" style="margin: 1%;">
                 <button type="button" class="btn btn-outline-info" id="showAllBtn">Show All</button>
             </div>
         </div>
