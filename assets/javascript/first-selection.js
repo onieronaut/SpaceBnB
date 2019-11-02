@@ -2,7 +2,7 @@ const desert  = {
     dropDown: $("#desert"),
     menu: {
         icon: $("#desertPlanets"),
-        hidden: false,
+        hidden: false
     }
 }
 

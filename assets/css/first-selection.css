@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    color: yellow;
+}
+
+button p{
+    color: yellow;
+}
+
+.modal-content {
+    background-color: black;
+    border-color: white;
+    margin-top: 10%;
+}
+
+.btn-warning {
+    color: white;
+}
