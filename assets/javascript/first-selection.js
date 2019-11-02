@@ -1,12 +1,12 @@
-let desert  = {
+const desert  = {
     dropDown: $("#desert"),
     menu: {
         icon: $("#desertPlanets"),
-        hidden: false
+        hidden: false,
     }
 }
 
-let frozen  = {
+const frozen  = {
     dropDown: $("#frozen"),
     menu: {
         icon: $("#frozenPlanets"),
@@ -14,7 +14,7 @@ let frozen  = {
     }
 }
 
-let tropicalJungle  = {
+const tropicalJungle  = {
     dropDown: $("#tropicalJungle"),
     menu: {
         icon: $("#tropicalJunglePlanets"),
@@ -22,7 +22,7 @@ let tropicalJungle  = {
     }
 }
 
-let forrest  = {
+const forrest  = {
     dropDown: $("#forrest"),
     menu: {
         icon: $("#forrestPlanets"),
