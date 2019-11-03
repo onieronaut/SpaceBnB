@@ -1,15 +1,19 @@
 body {
-    margin: 0;
-    padding: 0;
     background-color: black;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .carousel-caption-text {
     background: rgba(0, 0, 0, 0.6); 
-    width: 400px;
-    height: 80px;
-    margin: auto;
-    padding: 9px;
 }
 
 #border {
@@ -19,8 +23,17 @@ body {
     height: 3px;
 }
 
-#down-arrow {
-    color: white;
-    margin-top: 10px;
-    text-align: center;
+#border-two {
+    background-color: white;
 }
+
+.cust-container {
+    color: white;
+}
+
+
+
+
+
+
+
