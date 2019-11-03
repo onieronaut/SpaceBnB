@@ -1,4 +1,4 @@
-let planets = ["Dagobah", "Endor", "Felucia", "Geonosis", "Hoth", "Kashyyyk", "Tatooine", "Naboo", "Bespin", "YavinIV", "Coruscant", "Kamino"]
+let planets = ["Dagobah", "Endor", "Felucia", "Geonosis", "Hoth", "Kashyyyk", "Tatooine", "Naboo", "Bespin", "Yavin IV", "Coruscant", "Kamino"]
 
 createPlanets()
 createModal ()
@@ -46,6 +46,45 @@ function createModal () {
         $(".my-modals").append(modal)
     }
 }
+
+// Initializes SWAPI-Wrapper - Do Not Change!
+document.addEventListener("DOMContentLoaded", init, false);
+function init() {
+    var con = document.querySelector("#console");
+    function log() {
+        console.log(...arguments);
+        var pre = document.createElement("pre");
+        for (var arg of arguments) {
+            switch (typeof arg) {
+                case "string":
+                    pre.append(arg);
+                    break;
+                default:
+                    pre.append(JSON.stringify(arg, null, 2));
+            }
+            pre.append(" ");
+        }
+        con.append(pre);
+    }
+
+    // swapiModule.getPlanets({ page: 1 }).then(function (data) {
+    //     console.log("Result of getPlanets", data);
+    // }); 
+
+    for (let i = 0; i < planets.length; i++) {
+        swapiModule.getPlanets({ search: planets[i] }).then(function (data) {
+            console.log(`This is planet: ${planets[i]}`);
+            console.log(`climate: ${data.results[0].climate}`);
+            console.log(`gravity: ${data.results[0].gravity}`);
+            console.log(`population: ${data.results[0].population}`);
+            console.log(`terrain: ${data.results[0].terrain}`);
+            console.log(`---------------------------`)
+        });
+    }
+
+}
+
+
 
 
 
