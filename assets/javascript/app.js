@@ -37,8 +37,9 @@ function createModal () {
                                     <span aria-hidden="true">&times;</span>
                                     </button>`)
                                     .appendTo(modalContent)
-        let modalBody = $("<div>").addClass("modal-body")
+        let modalBody = $("<div>").addClass("modal-body planet-info")
                                 .appendTo(modalContent)
+                                .attr("id", `planet-info-${planets[i].toLowerCase()}`)
         let modalFooter = $("<div>").addClass("modal-footer")
                                 .html(`<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary">Select</button>`)
@@ -73,6 +74,12 @@ function init() {
 
     for (let i = 0; i < planets.length; i++) {
         swapiModule.getPlanets({ search: planets[i] }).then(function (data) {
+            let planetInfo = $("<div>").html(`Climate: ${data.results[0].climate}<br>
+                                                Gravity: ${data.results[0].gravity}<br>
+                                                Population: ${data.results[0].population}<br>
+                                                Terrain: ${data.results[0].terrain}`)
+            $(`#planet-info-${planets[i].toLowerCase()}`).append(planetInfo)
+            
             console.log(`This is planet: ${planets[i]}`);
             console.log(`climate: ${data.results[0].climate}`);
             console.log(`gravity: ${data.results[0].gravity}`);
