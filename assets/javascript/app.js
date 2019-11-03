@@ -1,4 +1,4 @@
-let planets = ["Dagobah", "Endor", "Felucia", "Geonosis", "Hoth", "Kashyyyk", "Tatooine", "Naboo", "Bespin", "Yavin IV", "Coruscant", "Kamino"]
+let planets = ["Dagobah", "Endor", "Felucia", "Geonosis", "Hoth", "Kashyyyk", "Tatooine", "Naboo", "Bespin", "Mustafar", "Coruscant", "Kamino"]
 
 createPlanets()
 createModal ()
@@ -67,7 +67,7 @@ function init() {
         con.append(pre);
     }
 
-    // swapiModule.getPlanets({ page: 1 }).then(function (data) {
+    // swapiModule.getPlanets({ page: 2 }).then(function (data) {
     //     console.log("Result of getPlanets", data);
     // }); 
 
