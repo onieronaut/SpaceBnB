@@ -5,14 +5,14 @@ createModal ()
 
 function createPlanets () {
     for (let i = 0; i < planets.length; i++) {
-        let planetColumn = $("<div>").html(`${planets[i]}<br>`)
+        let planetColumn = $("<div>").html(`<br>${planets[i]}<br>`)
                                 .addClass("col-sm-4 text-center")
                                 .attr("data-toggle", "modal")
                                 .attr("data-target", `#${planets[i].toLowerCase()}`)
                                 .append(
                                     $("<img>").attr("src", `assets/images/planets/${planets[i].toLowerCase()}/planet.png`)
-                                                .attr("height", "200px")
-                                                .attr("width", "200px")
+                                                .attr("height", "150px")
+                                                .attr("width", "150px")
         )
         $(".planets").append(planetColumn)
     }
@@ -42,7 +42,7 @@ function createModal () {
                                 .attr("id", `planet-info-${planets[i].toLowerCase()}`)
         let modalFooter = $("<div>").addClass("modal-footer")
                                 .html(`<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Select</button>`)
+                                <a href="index2.html" target="_blank" class="btn btn-primary user-select" value='${planets[i].toLowerCase()}'>Select</a>`)
                                 .appendTo(modalContent)
         $(".my-modals").append(modal)
     }
@@ -90,6 +90,14 @@ function init() {
     }
 
 }
+
+// this isn't working on index2.html
+$(document).on("click", ".user-select", function () {
+    let planetSelection = $(this).attr("value");
+    console.log(planetSelection.toUpperCase());
+
+    $("<h1>").text(planetSelection.toUpperCase()).appendTo("#user-select-title")
+}); 
 
 
 
