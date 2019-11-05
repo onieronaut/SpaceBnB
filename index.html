@@ -20,7 +20,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand splash-page" href="#">
                 <img src="assets/images/navbar_icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 SpaceBnB
             </a>
@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                <a class="nav-link" href="#">Home
+                <a class="nav-link splash-page" href="#">Home
                     <span class="sr-only">(current)</span>
                 </a>
                 </li>
@@ -48,64 +48,89 @@
         </div>
     </nav>
 
-    <header>
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <!-- Slide One -->
-                <div class="carousel-item active" data-interval="6000" style="background-image: url('assets/images/carousel_images/carousel_one.png')">
-                    <div class="carousel-caption d-none d-md-block carousel-caption-text">
-                        <h2 class="display-4">Looking to get far far away?</h2>
-                        <p class="lead">Let us help plan your next trip to another galaxy!</p>
+
+    <div id="page1">
+        <header>
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <!-- Slide One -->
+                    <div class="carousel-item active" data-interval="6000" style="background-image: url('assets/images/carousel_images/carousel_one.png')">
+                        <div class="carousel-caption d-none d-md-block carousel-caption-text">
+                            <h2 class="display-4">Looking to get far far away?</h2>
+                            <p class="lead">Let us help plan your next trip to another galaxy!</p>
+                        </div>
+                    </div>
+                    <!-- Slide Two -->
+                    <div class="carousel-item" data-interval="4000" style="background-image: url('assets/images/carousel_images/carousel_two.jpg')">
+                        <div class="carousel-caption d-none d-md-block carousel-caption-text">
+                            <h2 class="display-4">Looking to get far far away?</h2>
+                            <p class="lead">Let us help plan your next trip to another galaxy!</p>
+                        </div>
+                    </div>
+                    <!-- Slide Three -->
+                    <div class="carousel-item" data-interval="4000" style="background-image: url('assets/images/carousel_images/carousel_three.jpg')">
+                        <div class="carousel-caption d-none d-md-block carousel-caption-text">
+                            <h2 class="display-4">Looking to get far far away?</h2>
+                            <p class="lead">Let us help plan your next trip to another galaxy!</p>
+                        </div>
+                    </div>
+                    <!-- Slide Four -->
+                    <div class="carousel-item" data-interval="4000" style="background-image: url('assets/images/carousel_images/carousel_four.jpg')">
+                        <div class="carousel-caption d-none d-md-block carousel-caption-text">
+                            <h2 class="display-4">Looking to get far far away?</h2>
+                            <p class="lead">Let us help plan your next trip to another galaxy!</p>
+                        </div>
+                    </div>
+                    <!-- Slide Five -->
+                    <div class="carousel-item" data-interval="4000" style="background-image: url('assets/images/carousel_images/carousel_five.jpg')">
+                        <div class="carousel-caption d-none d-md-block carousel-caption-text">
+                            <h2 class="display-4">Looking to get far far away?</h2>
+                            <p class="lead">Let us help plan your next trip to another galaxy!</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Slide Two -->
-                <div class="carousel-item" data-interval="4000" style="background-image: url('assets/images/carousel_images/carousel_two.jpg')">
-                    <div class="carousel-caption d-none d-md-block carousel-caption-text">
-                        <h2 class="display-4">Looking to get far far away?</h2>
-                        <p class="lead">Let us help plan your next trip to another galaxy!</p>
-                    </div>
-                </div>
-                <!-- Slide Three -->
-                <div class="carousel-item" data-interval="4000" style="background-image: url('assets/images/carousel_images/carousel_three.jpg')">
-                    <div class="carousel-caption d-none d-md-block carousel-caption-text">
-                        <h2 class="display-4">Looking to get far far away?</h2>
-                        <p class="lead">Let us help plan your next trip to another galaxy!</p>
-                    </div>
-                </div>
-                <!-- Slide Four -->
-                <div class="carousel-item" data-interval="4000" style="background-image: url('assets/images/carousel_images/carousel_four.jpeg')">
-                    <div class="carousel-caption d-none d-md-block carousel-caption-text">
-                        <h2 class="display-4">Looking to get far far away?</h2>
-                        <p class="lead">Let us help plan your next trip to another galaxy!</p>
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+        </header>
+        <hr id="border"><br><br>
+        <div class="container cust-container">
+            <div class="row">
+                <br><br>
+                <div class="col-sm-12 lead text-center">Not sure which planet to travel to? Click on the planets below for more info</div>
+            </div>
+            <br><hr id="border-two"><br>
+            <div class="row planets"></div>
         </div>
-    </header>
-
-    <hr id="border">
-    <br><br>
-
-    <div class="container cust-container">
-        <div class="row">
-            <br><br>
-            <div class="col-sm-12 lead text-center">Not sure which planet to travel to? Click on the planets below for more info</div>
-        </div>
-        <br>
-        <hr id="border-two">
-        <br>
-        <div class="row planets"></div>
+        <div class="my-modals"></div>
     </div>
 
-    <div class="my-modals"></div>
+
+    <div id="page2">
+        <div class="container cust-container">
+            <div class="row user-lodging"></div>
+            <div class="row user-spaceship"></div>
+        </div>
+    </div>
+
+
+    <div id="page3">
+        <div class="container cust-container">
+            <div class="row">
+                <div class="col-sm-12 lead text-center">
+                    <h2 class="col-sm-12" id="user-select-title"></h2>
+                    <div id="end-image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     <script src="assets/javascript/app.js"></script>
     <script src="assets/SWAPI-Wrapper-master/lib/swapi.js"></script>
