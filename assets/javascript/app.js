@@ -4,7 +4,8 @@ let planets = [
         name: "Dagobah",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Dagobah"
     },
 
     {
@@ -122,18 +123,16 @@ function createModal() {
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>`)
-        // .appendTo(modalContent)
         let modalBody = $("<div>").addClass("modal-body planet-info")
-            // .appendTo(modalContent)
             .attr("id", `planet-info-${planets[i].name.toLowerCase()}`)
         let modalFooter = $("<div>").addClass("modal-footer")
             .html(`<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary user-select" data-dismiss="modal" value='${planets[i].name}'>Select</button>`)
-        // .appendTo(modalContent)
         $(".my-modals").append(modal)
         modalContent.append(modalHeader)
         modalContent.append(modalBody)
         modalContent.append(modalFooter)
+        // modalBody.append(linkText);
     }
 }
 
@@ -172,12 +171,22 @@ function init() {
             function capitalize_Words(str) {
                 return str.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
             }
+
             let dataResults = data.results[0]
             let planetInfo = $("<div>").html(`Climate: ${capitalize_Words(dataResults.climate)}<br>
                                                 Gravity: ${capitalize_Words(dataResults.gravity)}<br>
                                                 Population: ${addComma(dataResults.population)}<br>
                                                 Terrain: ${capitalize_Words(dataResults.terrain)}`)
-            $(`#planet-info-${planets[i].name.toLowerCase()}`).append(planetInfo)
+            $(`#planet-info-${planets[i].name.toLowerCase()}`)
+                .append(planetInfo)
+                .append("<hr>")
+            $(`#planet-info-${planets[i].name.toLowerCase()}`)
+                .append("Wookiepedia API Snippet")
+                .append("<hr>")           
+            let linkHere = $("<a>").attr("href", "link to wookiepedia").text("Read more about " + planets[i].name + " here")
+            // let readMore = "Read more about " + planets[i].name + " " + linkHere
+            $(`#planet-info-${planets[i].name.toLowerCase()}`).append(linkHere);
+
 
             // console.log(`This is planet: ${planets[i].name}`);
             // console.log(`climate: ${data.results[0].climate}`);
