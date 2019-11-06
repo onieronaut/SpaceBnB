@@ -1,29 +1,29 @@
 // Planet array
 let planets = [
     {name: "Dagobah", 
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}, 
+      lodgingOne: "Immerse yourself in the dense and swampy forest and stay in the old Yoda's hut", 
+      lodgingTwo: "Enjoy the mist in the forest from a confortable private home", 
+      lodgingThree: "Stay dry in this luxurious private home while enjoying the perfect view of the bayous"}, 
   
     {name: "Endor",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}, 
+      lodgingOne: "experience the endless forest while being safe in this fortress", 
+      lodgingTwo: "This village is a perfect place to relax an adventurous day", 
+      lodgingThree: "Go for the full experience and live with the Ewoks in their arboreal huts "}, 
   
     {name: "Felucia",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}, 
+      lodgingOne: "Get a room in this shared community walking distance to the humid forest", 
+      lodgingTwo: "Stay in the heart of the jungle surrounded by humid landscape overgrown by forests of bizarre wilderness  ", 
+      lodgingThree: "Stay in this private home and enjoy the immense primitive plants and other life-forms"}, 
   
     {name: "Geonosis",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}, 
+      lodgingOne: "This old hotel is perfect for those who want to explore the harsh desert", 
+      lodgingTwo: "This beautiful castle is minutes away from the Geonosians maintain large factories of droids and weapons", 
+      lodgingThree: "Stay in the historical district where 'The Battle of Geonosis' took place"}, 
   
     {name: "Hoth",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"},
+      lodgingOne: "Experience this world of ice and snow from this old observatory", 
+      lodgingTwo: "Stay in this cozy room and enjoy the natural caves formed by giant ice bubbles", 
+      lodgingThree: "Enjoy this beautiful private home located up in the mountains"},
   
     {name: "Kashyyyk",
       lodgingOne: "Stay with a Wookie Host Family!", 
@@ -31,34 +31,34 @@ let planets = [
       lodgingThree: "Enjoy the Pent House Suite Overlooking the Beautiful Wroshyr Trees!"}, 
   
     {name: "Tatooine",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}, 
+      lodgingOne: "Stay in the same house Luke Skywalker lived in his childhood", 
+      lodgingTwo: "This dwelling is a perfect place to learn how the moisture farms work", 
+      lodgingThree: "Enjoy this private room in this underground community"}, 
   
     {name: "Naboo",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}, 
+      lodgingOne: "Private home in this peaceful city thriving in arts, environmental protection and scientific achievements.", 
+      lodgingTwo: "Stay in this historic hotel located in the main capital of Naboo 'Theed'", 
+      lodgingThree: "Enjoy the tranquility in this luxurious home and explore the underwater city of Gungans"}, 
   
     {name: "Bespin",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}, 
+      lodgingOne: "Stay in this private room located in the heart of Cloud city", 
+      lodgingTwo: "Enjoy the view of the Metropolis from this spacious room", 
+      lodgingThree: "stay in this luxurious room and enjoy the view of Cloud city"}, 
   
     {name: "Mustafar",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}, 
+      lodgingOne: "Stay in this simple dwelling and enjoy the rivers of lava in the surroundings", 
+      lodgingTwo: "Enjoy your stay in this nice area where temperture is low due to the unusual mineral allotropes", 
+      lodgingThree: "Stay in the fortress Vader and feel the energy from the dark side"}, 
   
     {name: "Coruscant",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}, 
+      lodgingOne: "Private room with a view to the local city", 
+      lodgingTwo: "Enjoy this suite in one of the tallest skyscrapers ", 
+      lodgingThree: "Stay in this luxurious suite noted for its cosmopolitan culture and towering skyscrapers"}, 
     
     {name: "Kamino",
-      lodgingOne: "example", 
-      lodgingTwo: "example", 
-      lodgingThree: "example"}
+      lodgingOne: "Immerse yourself in this aquatic world and enjoy the spacious modern hotel with personal capsule beds", 
+      lodgingTwo: "Enjoy this underwater hotel", 
+      lodgingThree: "Luxurious hotel with a view to the ocean world"}
   ];
 
 // Displays planets on splash page with modal functionality
