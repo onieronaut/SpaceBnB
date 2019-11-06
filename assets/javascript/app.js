@@ -7,12 +7,12 @@ let planets = [
   
     {name: "Endor",
       lodgingOne: "experience the endless forest while being safe in this fortress", 
-      lodgingTwo: "This village is a perfect place to relax an adventurous day", 
-      lodgingThree: "Go for the full experience and live with the Ewoks in their arboreal huts "}, 
+      lodgingTwo: "This village is a perfect place to relax after an adventurous day", 
+      lodgingThree: "Go for the full experience and live with the Ewoks in their arboreal huts"}, 
   
     {name: "Felucia",
       lodgingOne: "Get a room in this shared community walking distance to the humid forest", 
-      lodgingTwo: "Stay in the heart of the jungle surrounded by humid landscape overgrown by forests of bizarre wilderness  ", 
+      lodgingTwo: "Stay in the heart of the jungle surrounded by humid landscape overgrown by forests of bizarre wilderness", 
       lodgingThree: "Stay in this private home and enjoy the immense primitive plants and other life-forms"}, 
   
     {name: "Geonosis",
@@ -36,7 +36,7 @@ let planets = [
       lodgingThree: "Enjoy this private room in this underground community"}, 
   
     {name: "Naboo",
-      lodgingOne: "Private home in this peaceful city thriving in arts, environmental protection and scientific achievements.", 
+      lodgingOne: "Private home in this peaceful city thriving in art, environmental protection and scientific achievements.", 
       lodgingTwo: "Stay in this historic hotel located in the main capital of Naboo 'Theed'", 
       lodgingThree: "Enjoy the tranquility in this luxurious home and explore the underwater city of Gungans"}, 
   
@@ -52,11 +52,11 @@ let planets = [
   
     {name: "Coruscant",
       lodgingOne: "Private room with a view to the local city", 
-      lodgingTwo: "Enjoy this suite in one of the tallest skyscrapers ", 
+      lodgingTwo: "Enjoy this suite in one of the tallest skyscrapers in the capital of the galaxy", 
       lodgingThree: "Stay in this luxurious suite noted for its cosmopolitan culture and towering skyscrapers"}, 
     
     {name: "Kamino",
-      lodgingOne: "Immerse yourself in this aquatic world and enjoy the spacious modern hotel with personal capsule beds", 
+      lodgingOne: "Immerse yourself in this aquatic world and enjoy the spacious modern hotel with confortable capsule beds", 
       lodgingTwo: "Enjoy this underwater hotel", 
       lodgingThree: "Luxurious hotel with a view to the ocean world"}
   ];

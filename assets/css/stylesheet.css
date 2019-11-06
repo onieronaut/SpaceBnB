@@ -30,9 +30,12 @@ body {
 .cust-container {
     color: white;
 }
-
-
-
+img{
+    border-radius: 35px;
+}
+img:hover{
+    border: 1.5px solid #6B8E23;
+}
 
 
 
