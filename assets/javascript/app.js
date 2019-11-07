@@ -220,42 +220,7 @@ function init() {
                     $(`#planet-info-${planets[i].name.toLowerCase()}`).append(linkHere);
                 })
                 .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
             // console.log(`This is planet: ${planets[i].name}`);
             // console.log(`climate: ${data.results[0].climate}`);
             // console.log(`gravity: ${data.results[0].gravity}`);
