@@ -213,8 +213,9 @@ function init() {
                 .then(contents => {
                     let data = JSON.parse(contents);
                     // Append description to modal
+                    let snippet = data.sections[0].content[0].text.replace(/was/g, "is").replace(/had/g, "has");
                     $(`#planet-info-${planets[i].name.toLowerCase()}`)
-                        .append(data.sections[0].content[0].text)
+                        .append(snippet)
                         .append("<hr>")
                     // Append link to modal
                     let linkHere = $("<a>").attr("href", planets[i].link).text("Read more about " + planets[i].name + " here")
