@@ -170,6 +170,7 @@ $(document).on("click", ".user-select", function () {
     $(".user-spaceship").hide();
     let planetSelection = $(this).attr("value");
     console.log(planetSelection);
+    localStorage.setItem("user-planet", JSON.stringify(planetSelection));
 
     findWithAttr(planets, "name", planetSelection)
 
@@ -199,7 +200,7 @@ function createPlanetLodging () {
 
     let planetLodgingColumnOne = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
                             .attr("href", "#anchor-here")
-                            .attr("value", `${planets[thePlanetIndex].name}`)
+                            .attr("value", `${planets[thePlanetIndex].lodgingOne}`)
                             .attr("amount", "99")
                             .append(
                                 $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
@@ -213,7 +214,7 @@ function createPlanetLodging () {
 
     let planetLodgingColumnTwo = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
                             .attr("href", "#anchor-here")
-                            .attr("value", `${planets[thePlanetIndex].name}`)
+                            .attr("value", `${planets[thePlanetIndex].lodgingTwo}`)
                             .attr("amount", "199")
                             .append(
                                 $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
@@ -227,7 +228,7 @@ function createPlanetLodging () {
 
     let planetLodgingColumnThree = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
                             .attr("href", "#anchor-here")
-                            .attr("value", `${planets[thePlanetIndex].name}`)
+                            .attr("value", `${planets[thePlanetIndex].lodgingThree}`)
                             .attr("amount", "299")
                             .append(
                                 $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
@@ -281,25 +282,34 @@ let spaceships = [
 
 // On click for lodging anchors to take user to spaceship options
 $(document).on("click", ".user-select-lodging", function () {
-    let userDestination = $(this).attr("value");
-    console.log(userDestination);
+    let userLodging = $(this).attr("value");
+    let userLodgingCost = $(this).attr("amount");
+    console.log(userLodging);
+    console.log(userLodgingCost);
+    localStorage.setItem("user-lodging", JSON.stringify(userLodging));
+    localStorage.setItem("user-lodging-cost", JSON.stringify(userLodgingCost));
 
-    createSpaceships()
+    createSpaceships()    
+}); 
 
-    // Display end page and checkout
-    $(document).on("click", ".user-spaceship", function () {
+
+// Display end page and checkout
+$(document).on("click", ".user-spaceship-selection", function () {
     $("#page1").hide()
     $("#page2").hide()
     $("#page3").show()
-    // let userSpaceship = $(this).attr("value");
-    // console.log(userSpaceship);
+    let userSpaceship = $(this).attr("value");
+    let userSpaceshipCost = $(this).attr("amount");
+    console.log(userSpaceship);
+    console.log(userSpaceshipCost);
+    localStorage.setItem("user-spaceship", JSON.stringify(userSpaceship));
+    localStorage.setItem("user-spaceship-cost", JSON.stringify(userSpaceshipCost));
 
-    $("#user-select-title").html(`<br><br><h1>Pack your bags, you're traveling to ${userDestination.toUpperCase()}!</h1>`)
+    $("#user-select-title").html(`<br><br><h1>Pack your bags, you're traveling to ____!</h1>`)
     $("#end-image").html("")
                     .append(
                         $("<img>").attr("src", "assets/images/happy-yoda.gif")
                     )
-    }); 
 }); 
 
 // Dynamically creates spaceship options with images
@@ -313,7 +323,7 @@ function createSpaceships () {
     $(".user-spaceship").append(spaceshipTitle)
 
     for (let i = 0; i < spaceships.length; i++) {
-        let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center")
+        let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
                                 .attr("value", spaceships[i].name)
                                 .attr("amount", spaceships[i].amount )
                                 .append(
