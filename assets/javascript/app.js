@@ -224,7 +224,7 @@ $(document).on("click", ".user-select", function () {
     $("#page2").show()
     $(".user-spaceship").hide();
     let planetSelection = $(this).attr("value");
-    console.log(planetSelection);
+    localStorage.setItem("user-planet", JSON.stringify(planetSelection));
 
     findWithAttr(planets, "name", planetSelection)
 
@@ -253,45 +253,48 @@ function createPlanetLodging() {
     $(".user-lodging").append(planetLodgingTitle)
 
     let planetLodgingColumnOne = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
-        .attr("href", "#anchor-here")
-        .attr("value", `${planets[thePlanetIndex].name}`)
-        .attr("amount", "99")
-        .append(
-            $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
-                .attr("height", "280px")
-                .attr("width", "280px")
-        )
-        .append(
-            $("<h4>").html(`${planets[thePlanetIndex].lodgingOne}<br>$99`)
-        )
+.attr("href", "#anchor-here")
+                            .attr("value", `${planets[thePlanetIndex].lodgingOne}`)
+                            .attr("amount", "99")
+                            .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
+                            .append(
+                                $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
+                                            .attr("height", "280px")
+                                            .attr("width", "280px")
+                            )
+                            .append(
+                                $("<h4>").html(`${planets[thePlanetIndex].lodgingOne}<br>$99`)
+                            )
     $(".user-lodging").append(planetLodgingColumnOne)
 
     let planetLodgingColumnTwo = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
-        .attr("href", "#anchor-here")
-        .attr("value", `${planets[thePlanetIndex].name}`)
-        .attr("amount", "199")
-        .append(
-            $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
-                .attr("height", "280px")
-                .attr("width", "280px")
-        )
-        .append(
-            $("<h4>").html(`${planets[thePlanetIndex].lodgingTwo}<br>$199`)
-        )
+                            .attr("href", "#anchor-here")
+                            .attr("value", `${planets[thePlanetIndex].lodgingTwo}`)
+                            .attr("amount", "199")
+                            .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
+                            .append(
+                                $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
+                                            .attr("height", "280px")
+                                            .attr("width", "280px")
+                            )
+                            .append(
+                                $("<h4>").html(`${planets[thePlanetIndex].lodgingTwo}<br>$199`)
+                            )
     $(".user-lodging").append(planetLodgingColumnTwo)
 
     let planetLodgingColumnThree = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
-        .attr("href", "#anchor-here")
-        .attr("value", `${planets[thePlanetIndex].name}`)
-        .attr("amount", "299")
-        .append(
-            $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
-                .attr("height", "280px")
-                .attr("width", "280px")
-        )
-        .append(
-            $("<h4>").html(`${planets[thePlanetIndex].lodgingThree}<br>$299`)
-        )
+                            .attr("href", "#anchor-here")
+                            .attr("value", `${planets[thePlanetIndex].lodgingThree}`)
+                            .attr("amount", "299")
+                            .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
+                            .append(
+                                $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
+                                            .attr("height", "280px")
+                                            .attr("width", "280px")
+                            )
+                            .append(
+                                $("<h4>").html(`${planets[thePlanetIndex].lodgingThree}<br>$299`)
+                            )
     $(".user-lodging").append(planetLodgingColumnThree)
 }
 
@@ -354,26 +357,41 @@ let spaceships = [
 
 // On click for lodging anchors to take user to spaceship options
 $(document).on("click", ".user-select-lodging", function () {
-    let userDestination = $(this).attr("value");
-    console.log(userDestination);
+    let userLodging = $(this).attr("value");
+    let userLodgingCost = $(this).attr("amount");
+    let userLodgingImage = $(this).attr("link");
+    localStorage.setItem("user-lodging", JSON.stringify(userLodging));
+    localStorage.setItem("user-lodging-cost", JSON.stringify(userLodgingCost));
+    localStorage.setItem("user-lodging-image", JSON.stringify(userLodgingImage));
 
-    createSpaceships()
+    createSpaceships()    
+}); 
 
-    // Display end page and checkout
-    $(document).on("click", ".user-spaceship", function () {
-        $("#page1").hide()
-        $("#page2").hide()
-        $("#page3").show()
-        // let userSpaceship = $(this).attr("value");
-        // console.log(userSpaceship);
 
-        $("#user-select-title").html(`<br><br><h1>Pack your bags, you're traveling to ${userDestination.toUpperCase()}!</h1>`)
-        $("#end-image").html("")
-            .append(
-                $("<img>").attr("src", "assets/images/happy-yoda.gif")
-            )
-    });
-});
+$(document).on("click", ".user-spaceship-selection", function () {
+    $("#page1").hide()
+    $("#page2").hide()
+    $("#page3").show()
+    let userSpaceship = $(this).attr("value");
+    let userSpaceshipCost = $(this).attr("amount");
+    let userSpaceshipImage = $(this).attr("link");
+    localStorage.setItem("user-spaceship", JSON.stringify(userSpaceship));
+    localStorage.setItem("user-spaceship-cost", JSON.stringify(userSpaceshipCost));
+    localStorage.setItem("user-spaceship-image", JSON.stringify(userSpaceshipImage));
+
+    let userDestinationPlanet = JSON.parse(localStorage.getItem("user-planet"));
+
+    $("#user-select-title").html(`<br><br><h1>Pack your bags, you're traveling to ${userDestinationPlanet}!</h1>`)
+    $("#end-image").html("")
+                    .append(
+                        $("<img>").attr("src", "assets/images/happy-yoda.gif")
+                    )
+
+    $(".checkout-head").html("");
+    $(".checkout-body").html("");
+    createCheckout ()
+}); 
+
 
 // Dynamically creates spaceship options with images
 function createSpaceships() {
@@ -386,20 +404,64 @@ function createSpaceships() {
     $(".user-spaceship").append(spaceshipTitle)
 
     for (let i = 0; i < spaceships.length; i++) {
-        let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center")
-            .attr("value", spaceships[i].name)
-            .attr("amount", spaceships[i].amount)
-            .append(
-                $("<img>").attr("src", spaceships[i].image)
-                    .attr("height", "70%")
-                    .attr("width", "70%")
-            )
-            .append(
-                $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
-            )
+
+                let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
+                                .attr("value", spaceships[i].name)
+                                .attr("amount", spaceships[i].amount)
+                                .attr("link", spaceships[i].image)
+                                .append(
+                                    $("<img>").attr("src", spaceships[i].image)
+                                                .attr("height", "70%")
+                                                .attr("width", "70%")
+                                )
+                                .append(
+                                    $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
+                                )
         $(".user-spaceship").append(spaceshipColumn)
     }
 }
+
+function createCheckout () {
+    let lodgingImage = JSON.parse(localStorage.getItem("user-lodging-image"));
+    let lodgingPrice = JSON.parse(localStorage.getItem("user-lodging-cost"));
+    let spaceshipImage = JSON.parse(localStorage.getItem("user-spaceship-image"));
+    let spaceshipPrice = JSON.parse(localStorage.getItem("user-spaceship-cost"));
+
+   let tableHeader = $("<tr>").append(
+                $("<th>").addClass("border-0 bg-light")
+                        .append(
+                            $("<div>").addClass("p-2 px-3 text-uppercase")
+                                        .html("Items")
+                        ),
+                $("<th>").addClass("border-0 bg-light")
+                        .append(
+                            $("<div>").addClass("p-2 px-3 text-uppercase")
+                                        .html("Price")
+                        )
+            )
+    $(".checkout-head").append(tableHeader)
+
+    let newRowOne = $("<tr>").append(
+        $("<td>").append(
+            $("<img>").attr("src", `${lodgingImage}`)
+                        .attr("width", "120px")
+                        .attr("height", "120px"),
+        ),
+        $("<td>").html(`$${lodgingPrice}`)
+    )
+    $(".checkout-body").append(newRowOne)
+
+    let newRowTwo = $("<tr>").append(
+        $("<td>").append(
+            $("<img>").attr("src", `${spaceshipImage}`)
+                        .attr("width", "120px")
+                        .attr("height", "120px"),
+        ),
+        $("<td>").html(`$${spaceshipPrice}`)
+    )
+    $(".checkout-body").append(newRowTwo)
+};
+
 
 
 
