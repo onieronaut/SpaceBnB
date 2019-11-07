@@ -5,84 +5,107 @@ let planets = [
         lodgingOne: "example",
         lodgingTwo: "example",
         lodgingThree: "example",
-        link: "https://starwars.fandom.com/wiki/Dagobah"
+        link: "https://starwars.fandom.com/wiki/Dagobah",
+        wikiNum: 452956
     },
 
     {
         name: "Endor",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Endor",
+        wikiNum: 456136
     },
 
     {
         name: "Felucia",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Felucia",
+        wikiNum: 465003
     },
 
     {
         name: "Geonosis",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Geonosis",
+        wikiNum: 457990
     },
 
     {
         name: "Hoth",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Hoth",
+        wikiNum: 451989
     },
 
     {
         name: "Kashyyyk",
         lodgingOne: "Stay with a Wookie Host Family!",
         lodgingTwo: "Relax in this Private Home in the City of Rwookrrorro, the Birthplace of Chewbacca!",
-        lodgingThree: "Enjoy the Pent House Suite Overlooking the Beautiful Wroshyr Trees!"
+        lodgingThree: "Enjoy the Pent House Suite Overlooking the Beautiful Wroshyr Trees!",
+        link: "https://starwars.fandom.com/wiki/Kashyyyk",
+        wikiNum: 455688
     },
 
     {
         name: "Tatooine",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Tatooine",
+        wikiNum: 452688
     },
 
     {
         name: "Naboo",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Naboo",
+        wikiNum: 451978
     },
 
     {
         name: "Bespin",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Bespin",
+        wikiNum: 453786
     },
 
     {
         name: "Mustafar",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Mustafar",
+        wikiNum: 453226
     },
 
     {
         name: "Coruscant",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Coruscant",
+        wikiNum: 452675
     },
 
     {
         name: "Kamino",
         lodgingOne: "example",
         lodgingTwo: "example",
-        lodgingThree: "example"
+        lodgingThree: "example",
+        link: "https://starwars.fandom.com/wiki/Kamino",
+        wikiNum: 453917
     }
 ];
 
@@ -180,12 +203,57 @@ function init() {
             $(`#planet-info-${planets[i].name.toLowerCase()}`)
                 .append(planetInfo)
                 .append("<hr>")
-            $(`#planet-info-${planets[i].name.toLowerCase()}`)
-                .append("Wookiepedia API Snippet")
-                .append("<hr>")           
-            let linkHere = $("<a>").attr("href", "link to wookiepedia").text("Read more about " + planets[i].name + " here")
-            // let readMore = "Read more about " + planets[i].name + " " + linkHere
-            $(`#planet-info-${planets[i].name.toLowerCase()}`).append(linkHere);
+
+            // Wookiepedia API    
+            const proxyurl = "https://cors-anywhere.herokuapp.com/";
+            const url = `https://starwars.fandom.com/api/v1/Articles/AsSimpleJson?id=${planets[i].wikiNum}`;
+            fetch(proxyurl + url)
+                .then(response => response.text())
+                .then(contents => {
+                    let data = JSON.parse(contents);
+                    // Append description to modal
+                    $(`#planet-info-${planets[i].name.toLowerCase()}`)
+                        .append(data.sections[0].content[0].text)
+                        .append("<hr>")
+                    // Append link to modal
+                    let linkHere = $("<a>").attr("href", planets[i].link).text("Read more about " + planets[i].name + " here")
+                    $(`#planet-info-${planets[i].name.toLowerCase()}`).append(linkHere);
+                })
+                .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             // console.log(`This is planet: ${planets[i].name}`);
