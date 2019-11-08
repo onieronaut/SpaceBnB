@@ -1,3 +1,26 @@
+// Animate on Scroll Library initialization
+AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 2000, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
 // Planet array
 let planets = [
 
@@ -116,16 +139,44 @@ createModal()
 
 function createPlanets() {
     for (let i = 0; i < planets.length; i++) {
-        let planetColumn = $("<div>").html(`<br>${planets[i].name}<br>`)
-            .addClass("col-sm-4 text-center")
-            .attr("data-toggle", "modal")
-            .attr("data-target", `#${planets[i].name.toLowerCase()}`)
-            .append(
-                $("<img>").attr("src", `assets/images/planets/${planets[i].name.toLowerCase()}/planet.png`)
-                    .attr("height", "150px")
-                    .attr("width", "150px")
-            )
-        $(".planets").append(planetColumn)
+        if (i % 3 === 0) {
+            let planetColumn = $("<div>").html(`<br>${planets[i].name}<br>`)
+                .addClass("col-sm-4 text-center")
+                .attr("data-toggle", "modal")
+                .attr("data-aos", "fade-right")
+                .attr("data-target", `#${planets[i].name.toLowerCase()}`)
+                .append(
+                    $("<img>").attr("src", `assets/images/planets/${planets[i].name.toLowerCase()}/planet.png`)
+                        .attr("height", "150px")
+                        .attr("width", "150px")
+                )
+            $(".planets").append(planetColumn)
+
+        } else if (i % 3 === 1) {
+            let planetColumn = $("<div>").html(`<br>${planets[i].name}<br>`)
+                .addClass("col-sm-4 text-center")
+                .attr("data-toggle", "modal")
+                .attr("data-aos", "fade-up")
+                .attr("data-target", `#${planets[i].name.toLowerCase()}`)
+                .append(
+                    $("<img>").attr("src", `assets/images/planets/${planets[i].name.toLowerCase()}/planet.png`)
+                        .attr("height", "150px")
+                        .attr("width", "150px")
+                )
+            $(".planets").append(planetColumn)
+        } else {
+            let planetColumn = $("<div>").html(`<br>${planets[i].name}<br>`)
+                .addClass("col-sm-4 text-center")
+                .attr("data-toggle", "modal")
+                .attr("data-aos", "fade-left")
+                .attr("data-target", `#${planets[i].name.toLowerCase()}`)
+                .append(
+                    $("<img>").attr("src", `assets/images/planets/${planets[i].name.toLowerCase()}/planet.png`)
+                        .attr("height", "150px")
+                        .attr("width", "150px")
+                )
+            $(".planets").append(planetColumn)
+        }
     }
 }
 
@@ -287,6 +338,7 @@ function createPlanetLodging() {
 .attr("href", "#anchor-here")
                             .attr("value", `${planets[thePlanetIndex].lodgingOne}`)
                             .attr("amount", "99")
+                            .attr("data-aos", "fade-left")
                             .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
                             .append(
                                 $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
@@ -302,6 +354,7 @@ function createPlanetLodging() {
                             .attr("href", "#anchor-here")
                             .attr("value", `${planets[thePlanetIndex].lodgingTwo}`)
                             .attr("amount", "199")
+                            .attr("data-aos", "fade-up")
                             .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
                             .append(
                                 $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
@@ -317,6 +370,7 @@ function createPlanetLodging() {
                             .attr("href", "#anchor-here")
                             .attr("value", `${planets[thePlanetIndex].lodgingThree}`)
                             .attr("amount", "299")
+                            .attr("data-aos", "fade-right")
                             .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
                             .append(
                                 $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
@@ -436,19 +490,52 @@ function createSpaceships() {
 
     for (let i = 0; i < spaceships.length; i++) {
 
-                let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
-                                .attr("value", spaceships[i].name)
-                                .attr("amount", spaceships[i].amount)
-                                .attr("link", spaceships[i].image)
-                                .append(
-                                    $("<img>").attr("src", spaceships[i].image)
-                                                .attr("height", "70%")
-                                                .attr("width", "70%")
-                                )
-                                .append(
-                                    $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
-                                )
+        if (i % 3 === 0) {
+            let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
+            .attr("value", spaceships[i].name)
+            .attr("amount", spaceships[i].amount)
+            .attr("link", spaceships[i].image)
+            .attr("data-aos", "fade-left")
+            .append(
+                $("<img>").attr("src", spaceships[i].image)
+                    .attr("height", "70%")
+                    .attr("width", "70%")
+            )
+            .append(
+                $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
+            )
         $(".user-spaceship").append(spaceshipColumn)
+        } else if (i % 3 === 1) {
+            let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
+            .attr("value", spaceships[i].name)
+            .attr("amount", spaceships[i].amount)
+            .attr("link", spaceships[i].image)
+            .attr("data-aos", "fade-up")
+            .append(
+                $("<img>").attr("src", spaceships[i].image)
+                    .attr("height", "70%")
+                    .attr("width", "70%")
+            )
+            .append(
+                $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
+            )
+        $(".user-spaceship").append(spaceshipColumn)
+        } else { 
+            let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
+            .attr("value", spaceships[i].name)
+            .attr("amount", spaceships[i].amount)
+            .attr("link", spaceships[i].image)
+            .attr("data-aos", "fade-right")
+            .append(
+                $("<img>").attr("src", spaceships[i].image)
+                    .attr("height", "70%")
+                    .attr("width", "70%")
+            )
+            .append(
+                $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
+            )
+        $(".user-spaceship").append(spaceshipColumn)
+        }
     }
 
     
@@ -495,9 +582,13 @@ function createCheckout () {
     $(".checkout-body").append(newRowTwo)
 };
 
-
-
-
+// Anchor to Spaceship selection
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
 
 
 
