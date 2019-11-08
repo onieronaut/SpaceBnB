@@ -1,90 +1,114 @@
 // Planet array
 let planets = [
-  
-    {name: "Dagobah", 
-      lodgingOne: "Immerse yourself in the dense and swampy forest and stay in the old Yoda's hut", 
-      lodgingTwo: "Enjoy the mist in the forest from a confortable private home", 
-      lodgingThree: "Stay dry in this luxurious private home while enjoying the perfect view of the bayous",
-      link: "https://starwars.fandom.com/wiki/Dagobah",
-      wikiNum: 452956}, 
-  
-    {name: "Endor",
-      lodgingOne: "experience the endless forest while being safe in this fortress", 
-      lodgingTwo: "This village is a perfect place to relax after an adventurous day", 
-      lodgingThree: "Go for the full experience and live with the Ewoks in their arboreal huts",
-      link: "https://starwars.fandom.com/wiki/Endor",
-      wikiNum: 456136}, 
-  
-    {name: "Felucia",
-      lodgingOne: "Get a room in this shared community walking distance to the humid forest", 
-      lodgingTwo: "Stay in the heart of the jungle surrounded by humid landscape overgrown by forests of bizarre wilderness", 
-      lodgingThree: "Stay in this private home and enjoy the immense primitive plants and other life-forms",
-      link: "https://starwars.fandom.com/wiki/Felucia",
-      wikiNum: 465003}, 
-  
-    {name: "Geonosis",
-      lodgingOne: "This old hotel is perfect for those who want to explore the harsh desert", 
-      lodgingTwo: "This beautiful castle is minutes away from the Geonosians maintain large factories of droids and weapons", 
-      lodgingThree: "Stay in the historical district where 'The Battle of Geonosis' took place",
-      link: "https://starwars.fandom.com/wiki/Geonosis",
-      wikiNum: 457990}, 
-  
-    {name: "Hoth",
-      lodgingOne: "Experience this world of ice and snow from this old observatory", 
-      lodgingTwo: "Stay in this cozy room and enjoy the natural caves formed by giant ice bubbles", 
-      lodgingThree: "Enjoy this beautiful private home located up in the mountains",
-      link: "https://starwars.fandom.com/wiki/Hoth",
-      wikiNum: 451989},
-  
-    {name: "Kashyyyk",
-      lodgingOne: "Stay with a Wookie Host Family!", 
-      lodgingTwo: "Relax in this Private Home in the City of Rwookrrorro, the Birthplace of Chewbacca!", 
-      lodgingThree: "Enjoy the Pent House Suite Overlooking the Beautiful Wroshyr Trees!",
-      link: "https://starwars.fandom.com/wiki/Kashyyyk",
-      wikiNum: 455688}, 
-  
-    {name: "Tatooine",
-      lodgingOne: "Stay in the same house Luke Skywalker lived in his childhood", 
-      lodgingTwo: "This dwelling is a perfect place to learn how the moisture farms work", 
-      lodgingThree: "Enjoy this private room in this underground community",
-      link: "https://starwars.fandom.com/wiki/Tatooine",
-      wikiNum: 452688}, 
-  
-    {name: "Naboo",
-      lodgingOne: "Private home in this peaceful city thriving in art, environmental protection and scientific achievements.", 
-      lodgingTwo: "Stay in this historic hotel located in the main capital of Naboo 'Theed'", 
-      lodgingThree: "Enjoy the tranquility in this luxurious home and explore the underwater city of Gungans",
-      link: "https://starwars.fandom.com/wiki/Naboo",
-      wikiNum: 451978}, 
-  
-    {name: "Bespin",
-      lodgingOne: "Stay in this private room located in the heart of Cloud city", 
-      lodgingTwo: "Enjoy the view of the Metropolis from this spacious room", 
-      lodgingThree: "stay in this luxurious room and enjoy the view of Cloud city",
-      link: "https://starwars.fandom.com/wiki/Bespin",
-      wikiNum: 453786}, 
-  
-    {name: "Mustafar",
-      lodgingOne: "Stay in this simple dwelling and enjoy the rivers of lava in the surroundings", 
-      lodgingTwo: "Enjoy your stay in this nice area where temperture is low due to the unusual mineral allotropes", 
-      lodgingThree: "Stay in the fortress Vader and feel the energy from the dark side",
-      link: "https://starwars.fandom.com/wiki/Mustafar",
-      wikiNum: 453226}, 
-  
-    {name: "Coruscant",
-      lodgingOne: "Private room with a view to the local city", 
-      lodgingTwo: "Enjoy this suite in one of the tallest skyscrapers in the capital of the galaxy", 
-      lodgingThree: "Stay in this luxurious suite noted for its cosmopolitan culture and towering skyscrapers",
-      link: "https://starwars.fandom.com/wiki/Coruscant",
-      wikiNum: 452675}, 
-    
-    {name: "Kamino",
-      lodgingOne: "Immerse yourself in this aquatic world and enjoy the spacious modern hotel with confortable capsule beds", 
-      lodgingTwo: "Enjoy this underwater hotel", 
-      lodgingThree: "Luxurious hotel with a view to the ocean world",
-      link: "https://starwars.fandom.com/wiki/Kamino",
-      wikiNum: 453917}
-  ];
+
+    {
+        name: "Dagobah",
+        lodgingOne: "Immerse yourself in the dense and swampy forest and stay in the old Yoda's hut",
+        lodgingTwo: "Enjoy the mist in the forest from a confortable private home",
+        lodgingThree: "Stay dry in this luxurious private home while enjoying the perfect view of the bayous",
+        link: "https://starwars.fandom.com/wiki/Dagobah",
+        wikiNum: 452956
+    },
+
+    {
+        name: "Endor",
+        lodgingOne: "Experience the endless forest while being safe in this fortress",
+        lodgingTwo: "This village is a perfect place to relax after an adventurous day",
+        lodgingThree: "Go for the full experience and live with the Ewoks in their arboreal huts",
+        link: "https://starwars.fandom.com/wiki/Endor",
+        wikiNum: 456136
+    },
+
+    {
+        name: "Felucia",
+        lodgingOne: "Get a room in this shared community walking distance to the humid forest",
+        lodgingTwo: "Stay in the heart of the jungle surrounded by humid landscape overgrown by forests of bizarre wilderness",
+        lodgingThree: "Stay in this private home and enjoy the immense primitive plants and other life-forms",
+        link: "https://starwars.fandom.com/wiki/Felucia",
+        wikiNum: 465003
+    },
+
+    {
+        name: "Geonosis",
+        lodgingOne: "This old hotel is perfect for those who want to explore the harsh desert",
+        lodgingTwo: "This beautiful castle is minutes away from the Geonosians maintain large factories of droids and weapons",
+        lodgingThree: "Stay in the historical district where 'The Battle of Geonosis' took place",
+        link: "https://starwars.fandom.com/wiki/Geonosis",
+        wikiNum: 457990
+    },
+
+    {
+        name: "Hoth",
+        lodgingOne: "Experience this world of ice and snow from this old observatory",
+        lodgingTwo: "Stay in this cozy room and enjoy the natural caves formed by giant ice bubbles",
+        lodgingThree: "Enjoy this beautiful private home located up in the mountains",
+        link: "https://starwars.fandom.com/wiki/Hoth",
+        wikiNum: 451989
+    },
+
+    {
+        name: "Kashyyyk",
+        lodgingOne: "Stay with a Wookie Host Family!",
+        lodgingTwo: "Relax in this Private Home in the City of Rwookrrorro, the Birthplace of Chewbacca!",
+        lodgingThree: "Enjoy the Pent House Suite Overlooking the Beautiful Wroshyr Trees!",
+        link: "https://starwars.fandom.com/wiki/Kashyyyk",
+        wikiNum: 455688
+    },
+
+    {
+        name: "Tatooine",
+        lodgingOne: "Stay in the same house Luke Skywalker lived in his childhood",
+        lodgingTwo: "This dwelling is a perfect place to learn how the moisture farms work",
+        lodgingThree: "Enjoy this private room in this underground community",
+        link: "https://starwars.fandom.com/wiki/Tatooine",
+        wikiNum: 452688
+    },
+
+    {
+        name: "Naboo",
+        lodgingOne: "Private home in this peaceful city thriving in art, environmental protection and scientific achievements.",
+        lodgingTwo: "Stay in this historic hotel located in the main capital of Naboo 'Theed'",
+        lodgingThree: "Enjoy the tranquility in this luxurious home and explore the underwater city of Gungans",
+        link: "https://starwars.fandom.com/wiki/Naboo",
+        wikiNum: 451978
+    },
+
+    {
+        name: "Bespin",
+        lodgingOne: "Stay in this private room located in the heart of Cloud city",
+        lodgingTwo: "Enjoy the view of the Metropolis from this spacious room",
+        lodgingThree: "stay in this luxurious room and enjoy the view of Cloud city",
+        link: "https://starwars.fandom.com/wiki/Bespin",
+        wikiNum: 453786
+    },
+
+    {
+        name: "Mustafar",
+        lodgingOne: "Stay in this simple dwelling and enjoy the rivers of lava in the surroundings",
+        lodgingTwo: "Enjoy your stay in this nice area where temperture is low due to the unusual mineral allotropes",
+        lodgingThree: "Stay in the fortress Vader and feel the energy from the dark side",
+        link: "https://starwars.fandom.com/wiki/Mustafar",
+        wikiNum: 453226
+    },
+
+    {
+        name: "Coruscant",
+        lodgingOne: "Private room with a view to the local city",
+        lodgingTwo: "Enjoy this suite in one of the tallest skyscrapers in the capital of the galaxy",
+        lodgingThree: "Stay in this luxurious suite noted for its cosmopolitan culture and towering skyscrapers",
+        link: "https://starwars.fandom.com/wiki/Coruscant",
+        wikiNum: 452675
+    },
+
+    {
+        name: "Kamino",
+        lodgingOne: "Immerse yourself in this aquatic world and enjoy the spacious modern hotel with confortable capsule beds",
+        lodgingTwo: "Enjoy this underwater hotel",
+        lodgingThree: "Luxurious hotel with a view to the ocean world",
+        link: "https://starwars.fandom.com/wiki/Kamino",
+        wikiNum: 453917
+    }
+];
 
 // Displays planets on splash page with modal functionality
 createPlanets()
@@ -189,15 +213,22 @@ function init() {
                 .then(contents => {
                     let data = JSON.parse(contents);
                     // Append description to modal
+                    let snippet = data.sections[0].content[0].text.replace(/was/g, "is").replace(/had/g, "has");
                     $(`#planet-info-${planets[i].name.toLowerCase()}`)
-                        .append(data.sections[0].content[0].text)
+                        .append(snippet)
                         .append("<hr>")
                     // Append link to modal
-                    let linkHere = $("<a>").attr("href", planets[i].link).text("Read more about " + planets[i].name + " here")
+                    let linkHere = $("<a>").attr("href", planets[i].link).text("Read more about " + planets[i].name + " here").addClass("wookiaLink")
+                    linkHere.on("click", function () {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        window.open(this.href, '_blank')
+                    })
                     $(`#planet-info-${planets[i].name.toLowerCase()}`).append(linkHere);
+
                 })
                 .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-            
+
             // console.log(`This is planet: ${planets[i].name}`);
             // console.log(`climate: ${data.results[0].climate}`);
             // console.log(`gravity: ${data.results[0].gravity}`);
@@ -419,6 +450,8 @@ function createSpaceships() {
                                 )
         $(".user-spaceship").append(spaceshipColumn)
     }
+
+    
 }
 
 function createCheckout () {
