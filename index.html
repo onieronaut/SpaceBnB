@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <link
         href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/stylesheet-checkout.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -42,15 +42,6 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -62,8 +53,6 @@
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <!-- Slide One -->
-                    <div class="carousel-item active" data-interval="6000"
-                        style="background-image: url('assets/images/carousel_images/carousel_one.png')">
                     <div class="carousel-item active" data-interval="6000" style="background-image: url('assets/images/carousel_images/carousel_one.jpg')">
                         <div class="carousel-caption d-none d-md-block carousel-caption-text">
                             <h2 class="display-4">Looking to get far far away?</h2>
@@ -79,8 +68,6 @@
                         </div>
                     </div>
                     <!-- Slide Three -->
-                    <div class="carousel-item" data-interval="4000"
-                        style="background-image: url('assets/images/carousel_images/carousel_three.jpg')">
                     <div class="carousel-item" data-interval="4000" style="background-image: url('assets/images/carousel_images/carousel_three.jpeg')">
                         <div class="carousel-caption d-none d-md-block carousel-caption-text">
                             <h2 class="display-4">Looking to get far far away?</h2>
@@ -154,9 +141,15 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
     <script src="assets/javascript/app.js"></script>
     <script src="assets/SWAPI-Wrapper-master/lib/swapi.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
