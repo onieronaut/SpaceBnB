@@ -248,8 +248,10 @@ function findWithAttr(array, attr, value) {
 function createPlanetLodging() {
     $(".user-lodging").html("");
 
+    let userPlanetChoice = JSON.parse(localStorage.getItem("user-planet"));
+
     let planetLodgingTitle = $("<div>").addClass("col-sm-12 text-center")
-        .html("<br><br><br><h3>Choose where you would like to stay</h3>")
+        .html(`<br><br><br><h3>Choose where you would like to stay in ${userPlanetChoice}</h3>`)
     $(".user-lodging").append(planetLodgingTitle)
 
     let planetLodgingColumnOne = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
