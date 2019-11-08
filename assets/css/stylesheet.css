@@ -37,6 +37,13 @@ img:hover{
     border: 1.5px solid #6B8E23;
 }
 
+.table-border{
+    margin: auto;
+    border-radius: 35px;
+    width: 60%;
+    text-align: center;
+}
+
 
 
 

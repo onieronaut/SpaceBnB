@@ -259,8 +259,8 @@ function createPlanetLodging() {
                             .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
                             .append(
                                 $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
-                                            .attr("height", "280px")
-                                            .attr("width", "280px")
+                                            .attr("height", "240px")
+                                            .attr("width", "300px")
                             )
                             .append(
                                 $("<h4>").html(`${planets[thePlanetIndex].lodgingOne}<br>$99`)
@@ -274,8 +274,8 @@ function createPlanetLodging() {
                             .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
                             .append(
                                 $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
-                                            .attr("height", "280px")
-                                            .attr("width", "280px")
+                                            .attr("height", "240px")
+                                            .attr("width", "300px")
                             )
                             .append(
                                 $("<h4>").html(`${planets[thePlanetIndex].lodgingTwo}<br>$199`)
@@ -289,8 +289,8 @@ function createPlanetLodging() {
                             .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
                             .append(
                                 $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
-                                            .attr("height", "280px")
-                                            .attr("width", "280px")
+                                            .attr("height", "240px")
+                                            .attr("width", "300px")
                             )
                             .append(
                                 $("<h4>").html(`${planets[thePlanetIndex].lodgingThree}<br>$299`)
@@ -303,55 +303,55 @@ let spaceships = [
     {
         name: "B Wing",
         image: "assets/images/spaceships/b-wing.png",
-        amount: 99
+        amount: 999
     },
 
     {
         name: "Interdictor Star Destroyer",
         image: "assets/images/spaceships/interdictor-star-destroyer.png",
-        amount: 199
+        amount: 1199
     },
 
     {
         name: "Millennium Falcon",
         image: "assets/images/spaceships/millennium-falcon.jpg",
-        amount: 299
+        amount: 1999
     },
 
     {
         name: "Naboo Starfighter",
         image: "assets/images/spaceships/naboo-starfighter.png",
-        amount: 99
+        amount: 999
     },
 
     {
         name: "Outrider",
         image: "assets/images/spaceships/outrider.png",
-        amount: 199
+        amount: 1199
     },
 
     {
         name: "Star Wars Ravager",
         image: "assets/images/spaceships/star-wars-ravager.png",
-        amount: 299
+        amount: 1999
     },
 
     {
         name: "Super Star Destroyer",
         image: "assets/images/spaceships/super-star-destroyer.png",
-        amount: 99
+        amount: 999
     },
 
     {
         name: "X Wing",
         image: "assets/images/spaceships/xwing.png",
-        amount: 199
+        amount: 1199
     },
 
     {
         name: "Y Wing",
         image: "assets/images/spaceships/y-wing.png",
-        amount: 299
+        amount: 1999
     },
 ];
 
@@ -444,7 +444,7 @@ function createCheckout () {
     let newRowOne = $("<tr>").append(
         $("<td>").append(
             $("<img>").attr("src", `${lodgingImage}`)
-                        .attr("width", "120px")
+                        .attr("width", "160px")
                         .attr("height", "120px"),
         ),
         $("<td>").html(`$${lodgingPrice}`)
@@ -454,12 +454,24 @@ function createCheckout () {
     let newRowTwo = $("<tr>").append(
         $("<td>").append(
             $("<img>").attr("src", `${spaceshipImage}`)
-                        .attr("width", "120px")
+                        .attr("width", "160px")
                         .attr("height", "120px"),
         ),
         $("<td>").html(`$${spaceshipPrice}`)
     )
     $(".checkout-body").append(newRowTwo)
+
+        lodgingPrice = parseInt(lodgingPrice);
+        spaceshipPrice = parseInt(spaceshipPrice);
+        result = lodgingPrice + spaceshipPrice;
+
+        let newRowThree = $("<tr>").append(
+        $("<td>").html("Total"),
+        $("<td>").html(`$${result}`)
+    )
+    $(".checkout-body").append(newRowThree)
+
+
 };
 
 
