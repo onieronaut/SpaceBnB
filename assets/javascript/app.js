@@ -12,7 +12,7 @@ let planets = [
 
     {
         name: "Endor",
-        lodgingOne: "experience the endless forest while being safe in this fortress",
+        lodgingOne: "Experience the endless forest while being safe in this fortress",
         lodgingTwo: "This village is a perfect place to relax after an adventurous day",
         lodgingThree: "Go for the full experience and live with the Ewoks in their arboreal huts",
         link: "https://starwars.fandom.com/wiki/Endor",
@@ -218,7 +218,7 @@ function init() {
                         .append(snippet)
                         .append("<hr>")
                     // Append link to modal
-                    let linkHere = $("<a>").attr("href", planets[i].link).text("Read more about " + planets[i].name + " here")
+                    let linkHere = $("<a>").attr("href", planets[i].link).text("Read more about " + planets[i].name + " here").addClass("wookiaLink")
                     linkHere.on("click", function () {
                         event.preventDefault();
                         event.stopPropagation();
@@ -430,6 +430,8 @@ function createSpaceships() {
             )
         $(".user-spaceship").append(spaceshipColumn)
     }
+
+    
 }
 
 
