@@ -1,5 +1,12 @@
 body {
-    background-color: black;
+    /* background-color: black; */
+    background: url(https://media.istockphoto.com/photos/stars-and-galaxy-outer-space-sky-night-universe-black-starry-of-picture-id1131303900?k=6&m=1131303900&s=170667a&w=0&h=02j0GtACJAJGwFacEe2pUI-jVkb5uZa7WA4f5LgizNc=);
+    /* background-size: cover; */
+    font-family: 'Oswald', sans-serif;
+}
+
+.col-sm-4 {
+    color:#ffa500; 
 }
 
 .carousel-item {
@@ -34,14 +41,59 @@ img{
     border-radius: 35px;
 }
 img:hover{
-    border: 1.5px solid #6B8E23;
+    border: 1.5px solid #007bff;
 }
+
+.modal-header {
+    background-color: #3d3d3d;
+}
+
+.modal-title {
+    color: #ffa500;
+    margin-left: 43%;
+    font-size: xx-large;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.close {
+    color: #ffa500;
+}
+
+.modal-content {
+    background-color: #aeaeae;
+    color: black;
+}
+
+.modal-footer {
+    background-color: #3d3d3d;
+}
+
+.wookiaLink {
+    /* color: #ffbc42; */
+    color: #ffa500;
+    font-size: x-large;
+    margin-left: 22%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-decoration:underline;
+    text-decoration-color: none;
+    font-weight:bold
+}
+
 
 .table-border{
     margin: auto;
     border-radius: 35px;
     width: 60%;
     text-align: center;
+}
+
+.user-select {
+    background-color: #ffa500;
+}
+
+table {
+    background-color: white;
+    margin-top: 20px;
 }
 
 
