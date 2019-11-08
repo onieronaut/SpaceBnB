@@ -333,7 +333,7 @@ function createPlanetLodging() {
     let userPlanetChoice = JSON.parse(localStorage.getItem("user-planet"));
 
     let planetLodgingTitle = $("<div>").addClass("col-sm-12 text-center")
-        .html(`<br><br><br><h3>Choose where you would like to stay in ${userPlanetChoice}</h3>`)
+        .html(`<br><br><br><h3>Choose where you would like to stay on ${userPlanetChoice} ?</h3>`).addClass("choiceTxt")
     $(".user-lodging").append(planetLodgingTitle)
 
     let planetLodgingColumnOne = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
@@ -468,7 +468,7 @@ $(document).on("click", ".user-spaceship-selection", function () {
 
     let userDestinationPlanet = JSON.parse(localStorage.getItem("user-planet"));
 
-    $("#user-select-title").html(`<br><br><h1>Pack your bags, you're traveling to ${userDestinationPlanet}!</h1>`)
+    $("#user-select-title").html(`<br><br><h1>Pack your bags, you're traveling to ${userDestinationPlanet}!</h1>`).addClass("choiceTxt")
     $("#end-image").html("")
                     .append(
                         $("<img>").attr("src", "assets/images/happy-yoda.gif")
@@ -487,7 +487,7 @@ function createSpaceships() {
 
     let spaceshipTitle = $("<div>").addClass("col-sm-12 text-center")
         .attr("id", "anchor-here")
-        .html("<br><br><br><h3>Looking for flight options?</h3>")
+        .html("<br><br><br><h3>Flight Options</h3>").addClass("choiceTxt")
     $(".user-spaceship").append(spaceshipTitle)
 
     for (let i = 0; i < spaceships.length; i++) {

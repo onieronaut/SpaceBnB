@@ -10,7 +10,7 @@ body {
 }
 
 .carousel-item {
-    height: 100vh;
+    height: 78vh;
     min-height: 350px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
@@ -19,12 +19,26 @@ body {
     background-size: cover;
 }
 
+.navbar-dark
+.navbar-brand {
+    color: #ffa500;
+}
+
+.navbar-dark
+.navbar-brand:hover {
+    color: #ffa500;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #ffa500;
+}
+
 .carousel-caption-text {
     background: rgba(0, 0, 0, 0.6); 
 }
 
 #border {
-    background-color: orange;
+    background-color: #ffa500;
     margin: auto;
     width: 250px;
     height: 3px;
@@ -32,6 +46,14 @@ body {
 
 #border-two {
     background-color: white;
+}
+
+#planets {
+    color: #007bff;
+    font-weight: bold;
+    font-size: x-large;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
 .cust-container {
@@ -46,11 +68,12 @@ img:hover{
 
 .modal-header {
     background-color: #3d3d3d;
+    text-align: center;
 }
 
 .modal-title {
+    display: inline-block;
     color: #ffa500;
-    margin-left: 43%;
     font-size: xx-large;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -69,22 +92,27 @@ img:hover{
 }
 
 .wookiaLink {
-    /* color: #ffbc42; */
     color: #ffa500;
     font-size: x-large;
-    margin-left: 22%;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-decoration:underline;
-    text-decoration-color: none;
-    font-weight:bold
 }
 
+.wookiaLink:hover {
+    text-decoration: none;
+    color: #ffa500;
+    font-size: x-large;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-decoration:underline;
+}
 
-.table-border{
-    margin: auto;
-    border-radius: 35px;
-    width: 60%;
-    text-align: center;
+.user-select-lodging:hover {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+.choiceTxt {
+    color: #007bff;
 }
 
 .user-select {
@@ -95,7 +123,6 @@ table {
     background-color: white;
     margin-top: 20px;
 }
-
 
 
 
