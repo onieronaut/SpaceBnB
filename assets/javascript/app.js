@@ -337,7 +337,7 @@ function createPlanetLodging() {
     $(".user-lodging").append(planetLodgingTitle)
 
     let planetLodgingColumnOne = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
-.attr("href", "#anchor-here")
+                            .attr("href", "#anchor-here")
                             .attr("value", `${planets[thePlanetIndex].lodgingOne}`)
                             .attr("amount", "99")
                             .attr("data-aos", "fade-left")
@@ -444,10 +444,10 @@ let spaceships = [
 
 // On click for lodging anchors to take user to spaceship options
 $(document).on("click", ".user-select-lodging", function () {
-    let userLodging = $(this).attr("value");
+    let userLodgingDescription = $(this).attr("value");
     let userLodgingCost = $(this).attr("amount");
     let userLodgingImage = $(this).attr("link");
-    localStorage.setItem("user-lodging", JSON.stringify(userLodging));
+    localStorage.setItem("user-lodging", JSON.stringify(userLodgingDescription));
     localStorage.setItem("user-lodging-cost", JSON.stringify(userLodgingCost));
     localStorage.setItem("user-lodging-image", JSON.stringify(userLodgingImage));
 
@@ -459,10 +459,10 @@ $(document).on("click", ".user-spaceship-selection", function () {
     $("#page1").hide()
     $("#page2").hide()
     $("#page3").show()
-    let userSpaceship = $(this).attr("value");
+    let userSpaceshipName = $(this).attr("value");
     let userSpaceshipCost = $(this).attr("amount");
     let userSpaceshipImage = $(this).attr("link");
-    localStorage.setItem("user-spaceship", JSON.stringify(userSpaceship));
+    localStorage.setItem("user-spaceship", JSON.stringify(userSpaceshipName));
     localStorage.setItem("user-spaceship-cost", JSON.stringify(userSpaceshipCost));
     localStorage.setItem("user-spaceship-image", JSON.stringify(userSpaceshipImage));
 
@@ -545,15 +545,23 @@ function createSpaceships() {
 
 function createCheckout () {
     let lodgingImage = JSON.parse(localStorage.getItem("user-lodging-image"));
+    let lodgingDescription = JSON.parse(localStorage.getItem("user-lodging"));
     let lodgingPrice = JSON.parse(localStorage.getItem("user-lodging-cost"));
     let spaceshipImage = JSON.parse(localStorage.getItem("user-spaceship-image"));
+    let spaceshipDescription = JSON.parse(localStorage.getItem("user-spaceship"));
     let spaceshipPrice = JSON.parse(localStorage.getItem("user-spaceship-cost"));
+
 
    let tableHeader = $("<tr>").append(
                 $("<th>").addClass("border-0 bg-light")
                         .append(
                             $("<div>").addClass("p-2 px-3 text-uppercase")
                                         .html("Items")
+                        ),
+                $("<th>").addClass("border-0 bg-light")
+                        .append(
+                            $("<div>").addClass("p-2 px-3 text-uppercase")
+                                        .html("Description")
                         ),
                 $("<th>").addClass("border-0 bg-light")
                         .append(
@@ -569,6 +577,7 @@ function createCheckout () {
                         .attr("width", "160px")
                         .attr("height", "120px"),
         ),
+        $("<td>").html(`${lodgingDescription}`),
         $("<td>").html(`$${lodgingPrice}`)
     )
     $(".checkout-body").append(newRowOne)
@@ -579,16 +588,18 @@ function createCheckout () {
                         .attr("width", "160px")
                         .attr("height", "120px"),
         ),
+        $("<td>").html(`${spaceshipDescription}`),
         $("<td>").html(`$${spaceshipPrice}`)
     )
     $(".checkout-body").append(newRowTwo)
-
-        lodgingPrice = parseInt(lodgingPrice);
-        spaceshipPrice = parseInt(spaceshipPrice);
-        result = lodgingPrice + spaceshipPrice;
+            
+        let lodgingPriceInt = parseInt(lodgingPrice);
+        let spaceshipPriceInt = parseInt(spaceshipPrice);
+        let result = lodgingPriceInt + spaceshipPriceInt;
 
         let newRowThree = $("<tr>").append(
         $("<td>").html("Total"),
+        $("<td>").html(""),
         $("<td>").html(`$${result}`)
     )
     $(".checkout-body").append(newRowThree)
