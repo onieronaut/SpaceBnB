@@ -79,6 +79,14 @@ img:hover{
     font-weight:bold
 }
 
+
+.table-border{
+    margin: auto;
+    border-radius: 35px;
+    width: 60%;
+    text-align: center;
+}
+
 .user-select {
     background-color: #ffa500;
 }
@@ -87,6 +95,7 @@ table {
     background-color: white;
     margin-top: 20px;
 }
+
 
 
 
