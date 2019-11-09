@@ -26,108 +26,97 @@ let planets = [
 
     {
         name: "Dagobah",
-        lodgingOne: "Immerse yourself in the dense and swampy forest and stay in the old Yoda's hut",
-        lodgingTwo: "Enjoy the mist in the forest from a confortable private home",
-        lodgingThree: "Stay dry in this luxurious private home while enjoying the perfect view of the bayous",
+        lodgingOne: "Yoda's hut",
+        lodgingTwo: "Forest hut in the mist",
+        lodgingThree: "Luxurious private home in the swamp",
         link: "https://starwars.fandom.com/wiki/Dagobah",
         wikiNum: 452956
     },
-
     {
         name: "Endor",
-        lodgingOne: "Experience the endless forest while being safe in this fortress",
-        lodgingTwo: "This village is a perfect place to relax after an adventurous day",
-        lodgingThree: "Go for the full experience and live with the Ewoks in their arboreal huts",
+        lodgingOne: "Fortress in the endless forest",
+        lodgingTwo: "The village",
+        lodgingThree: "The Ewoks' arboreal huts",
         link: "https://starwars.fandom.com/wiki/Endor",
         wikiNum: 456136
     },
-
     {
         name: "Felucia",
-        lodgingOne: "Get a room in this shared community walking distance to the humid forest",
-        lodgingTwo: "Stay in the heart of the jungle surrounded by humid landscape overgrown by forests of bizarre wilderness",
-        lodgingThree: "Stay in this private home and enjoy the immense primitive plants and other life-forms",
+        lodgingOne: "Shared community in the forest",
+        lodgingTwo: "Shared community in the heart of the jungle",
+        lodgingThree: "The home of primitive plants",
         link: "https://starwars.fandom.com/wiki/Felucia",
         wikiNum: 465003
     },
-
     {
         name: "Geonosis",
-        lodgingOne: "This old hotel is perfect for those who want to explore the harsh desert",
-        lodgingTwo: "This beautiful castle is minutes away from the Geonosians maintain large factories of droids and weapons",
-        lodgingThree: "Stay in the historical district where 'The Battle of Geonosis' took place",
+        lodgingOne: "Geonosian hotel",
+        lodgingTwo: "The Geonosian castle",
+        lodgingThree: "The Battle of Geonosis district hotel",
         link: "https://starwars.fandom.com/wiki/Geonosis",
         wikiNum: 457990
     },
-
     {
         name: "Hoth",
-        lodgingOne: "Experience this world of ice and snow from this old observatory",
-        lodgingTwo: "Stay in this cozy room and enjoy the natural caves formed by giant ice bubbles",
-        lodgingThree: "Enjoy this beautiful private home located up in the mountains",
+        lodgingOne: "The Hoth observatory",
+        lodgingTwo: "The giant ice hotel",
+        lodgingThree: "Wampa hotel",
         link: "https://starwars.fandom.com/wiki/Hoth",
         wikiNum: 451989
     },
-
     {
         name: "Kashyyyk",
-        lodgingOne: "Stay with a Wookie Host Family!",
-        lodgingTwo: "Relax in this Private Home in the City of Rwookrrorro, the Birthplace of Chewbacca!",
-        lodgingThree: "Enjoy the Pent House Suite Overlooking the Beautiful Wroshyr Trees!",
+        lodgingOne: "Private home with Wookie Host Family",
+        lodgingTwo: "Private Home in the City of Rwookrrorro",
+        lodgingThree: "Pent House Suite Overlooking the Wroshyr Trees",
         link: "https://starwars.fandom.com/wiki/Kashyyyk",
         wikiNum: 455688
     },
-
     {
         name: "Tatooine",
-        lodgingOne: "Stay in the same house Luke Skywalker lived in his childhood",
-        lodgingTwo: "This dwelling is a perfect place to learn how the moisture farms work",
-        lodgingThree: "Enjoy this private room in this underground community",
+        lodgingOne: "Moisture Farm private room",
+        lodgingTwo: "Hotel room with central access to the city and cantina",
+        lodgingThree: "Luke Skywalker's childhood home",
         link: "https://starwars.fandom.com/wiki/Tatooine",
         wikiNum: 452688
     },
-
     {
         name: "Naboo",
-        lodgingOne: "Private home in this peaceful city thriving in art, environmental protection and scientific achievements.",
-        lodgingTwo: "Stay in this historic hotel located in the main capital of Naboo 'Theed'",
-        lodgingThree: "Enjoy the tranquility in this luxurious home and explore the underwater city of Gungans",
+        lodgingOne: "Private home with access to the city.",
+        lodgingTwo: "Historic hotel room in the main city",
+        lodgingThree: "Private suite in the underwater city of the Gungans",
         link: "https://starwars.fandom.com/wiki/Naboo",
         wikiNum: 451978
     },
-
     {
         name: "Bespin",
-        lodgingOne: "Stay in this private room located in the heart of Cloud city",
-        lodgingTwo: "Enjoy the view of the Metropolis from this spacious room",
-        lodgingThree: "stay in this luxurious room and enjoy the view of Cloud city",
+        lodgingOne: "Standard cloud city room",
+        lodgingTwo: "Upgraded room with view of the metropolis",
+        lodgingThree: "Private suite with full view of the Cloud City",
         link: "https://starwars.fandom.com/wiki/Bespin",
         wikiNum: 453786
     },
-
     {
         name: "Mustafar",
-        lodgingOne: "Stay in this simple dwelling and enjoy the rivers of lava in the surroundings",
-        lodgingTwo: "Enjoy your stay in this nice area where temperture is low due to the unusual mineral allotropes",
-        lodgingThree: "Stay in the fortress Vader and feel the energy from the dark side",
+        lodgingOne: "Standard room with view of lava rivers",
+        lodgingTwo: "Low temperature private rooms",
+        lodgingThree: "Darth Vader's fortress",
         link: "https://starwars.fandom.com/wiki/Mustafar",
         wikiNum: 453226
     },
-
     {
         name: "Coruscant",
-        lodgingOne: "Private room with a view to the local city",
-        lodgingTwo: "Enjoy this suite in one of the tallest skyscrapers in the capital of the galaxy",
-        lodgingThree: "Stay in this luxurious suite noted for its cosmopolitan culture and towering skyscrapers",
+        lodgingOne: "Standard room with city view",
+        lodgingTwo: "Upgraded skyscraper room",
+        lodgingThree: "Skyscraper suite with city view",
         link: "https://starwars.fandom.com/wiki/Coruscant",
         wikiNum: 452675
     },
-
     {
         name: "Kamino",
-        lodgingOne: "Immerse yourself in this aquatic world and enjoy the spacious modern hotel with confortable capsule beds",
-        lodgingTwo: "Enjoy this underwater hotel",
-        lodgingThree: "Luxurious hotel with a view to the ocean world",
+        lodgingOne: "Crew Quarters",
+        lodgingTwo: "Clone Pod Room",
+        lodgingThree: "Suite with ocean view",
         link: "https://starwars.fandom.com/wiki/Kamino",
         wikiNum: 453917
     }
@@ -337,51 +326,51 @@ function createPlanetLodging() {
     $(".user-lodging").append(planetLodgingTitle)
 
     let planetLodgingColumnOne = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
-                            .attr("href", "#anchor-here")
-                            .attr("value", `${planets[thePlanetIndex].lodgingOne}`)
-                            .attr("amount", "99")
-                            .attr("data-aos", "fade-left")
-                            .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
-                            .append(
-                                $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
-                                            .attr("height", "240px")
-                                            .attr("width", "300px")
-                            )
-                            .append(
-                                $("<h4>").html(`${planets[thePlanetIndex].lodgingOne}<br>$99`)
-                            )
+        .attr("href", "#anchor-here")
+        .attr("value", `${planets[thePlanetIndex].lodgingOne}`)
+        .attr("amount", "99")
+        .attr("data-aos", "fade-left")
+        .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
+        .append(
+            $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-one.jpg`)
+                .attr("height", "240px")
+                .attr("width", "300px")
+        )
+        .append(
+            $("<h4>").html(`${planets[thePlanetIndex].lodgingOne}<br>$99`)
+        )
     $(".user-lodging").append(planetLodgingColumnOne)
 
     let planetLodgingColumnTwo = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
-                            .attr("href", "#anchor-here")
-                            .attr("value", `${planets[thePlanetIndex].lodgingTwo}`)
-                            .attr("amount", "199")
-                            .attr("data-aos", "fade-up")
-                            .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
-                            .append(
-                                $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
-                                            .attr("height", "240px")
-                                            .attr("width", "300px")
-                            )
-                            .append(
-                                $("<h4>").html(`${planets[thePlanetIndex].lodgingTwo}<br>$199`)
-                            )
+        .attr("href", "#anchor-here")
+        .attr("value", `${planets[thePlanetIndex].lodgingTwo}`)
+        .attr("amount", "199")
+        .attr("data-aos", "fade-up")
+        .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
+        .append(
+            $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-two.jpg`)
+                .attr("height", "240px")
+                .attr("width", "300px")
+        )
+        .append(
+            $("<h4>").html(`${planets[thePlanetIndex].lodgingTwo}<br>$199`)
+        )
     $(".user-lodging").append(planetLodgingColumnTwo)
 
     let planetLodgingColumnThree = $("<a>").addClass("col-sm-4 text-center user-select-lodging")
-                            .attr("href", "#anchor-here")
-                            .attr("value", `${planets[thePlanetIndex].lodgingThree}`)
-                            .attr("amount", "299")
-                            .attr("data-aos", "fade-right")
-                            .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
-                            .append(
-                                $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
-                                            .attr("height", "240px")
-                                            .attr("width", "300px")
-                            )
-                            .append(
-                                $("<h4>").html(`${planets[thePlanetIndex].lodgingThree}<br>$299`)
-                            )
+        .attr("href", "#anchor-here")
+        .attr("value", `${planets[thePlanetIndex].lodgingThree}`)
+        .attr("amount", "299")
+        .attr("data-aos", "fade-right")
+        .attr("link", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
+        .append(
+            $("<img>").attr("src", `assets/images/planets/${planets[thePlanetIndex].name.toLowerCase()}/lodging-three.jpg`)
+                .attr("height", "240px")
+                .attr("width", "300px")
+        )
+        .append(
+            $("<h4>").html(`${planets[thePlanetIndex].lodgingThree}<br>$299`)
+        )
     $(".user-lodging").append(planetLodgingColumnThree)
 }
 
@@ -451,8 +440,8 @@ $(document).on("click", ".user-select-lodging", function () {
     localStorage.setItem("user-lodging-cost", JSON.stringify(userLodgingCost));
     localStorage.setItem("user-lodging-image", JSON.stringify(userLodgingImage));
 
-    createSpaceships()    
-}); 
+    createSpaceships()
+});
 
 
 $(document).on("click", ".user-spaceship-selection", function () {
@@ -470,14 +459,14 @@ $(document).on("click", ".user-spaceship-selection", function () {
 
     $("#user-select-title").html(`<br><br><h1>Pack your bags, you're traveling to ${userDestinationPlanet}!</h1>`).addClass("choiceTxt")
     $("#end-image").html("")
-                    .append(
-                        $("<img>").attr("src", "assets/images/happy-yoda.gif")
-                    )
+        .append(
+            $("<img>").attr("src", "assets/images/happy-yoda.gif")
+        )
 
     $(".checkout-head").html("");
     $(".checkout-body").html("");
-    createCheckout ()
-}); 
+    createCheckout()
+});
 
 
 // Dynamically creates spaceship options with images
@@ -494,56 +483,56 @@ function createSpaceships() {
 
         if (i % 3 === 0) {
             let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
-            .attr("value", spaceships[i].name)
-            .attr("amount", spaceships[i].amount)
-            .attr("link", spaceships[i].image)
-            .attr("data-aos", "fade-left")
-            .append(
-                $("<img>").attr("src", spaceships[i].image)
-                    .attr("height", "70%")
-                    .attr("width", "70%")
-            )
-            .append(
-                $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
-            )
-        $(".user-spaceship").append(spaceshipColumn)
+                .attr("value", spaceships[i].name)
+                .attr("amount", spaceships[i].amount)
+                .attr("link", spaceships[i].image)
+                .attr("data-aos", "fade-left")
+                .append(
+                    $("<img>").attr("src", spaceships[i].image)
+                        .attr("height", "70%")
+                        .attr("width", "70%")
+                )
+                .append(
+                    $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
+                )
+            $(".user-spaceship").append(spaceshipColumn)
         } else if (i % 3 === 1) {
             let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
-            .attr("value", spaceships[i].name)
-            .attr("amount", spaceships[i].amount)
-            .attr("link", spaceships[i].image)
-            .attr("data-aos", "fade-up")
-            .append(
-                $("<img>").attr("src", spaceships[i].image)
-                    .attr("height", "70%")
-                    .attr("width", "70%")
-            )
-            .append(
-                $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
-            )
-        $(".user-spaceship").append(spaceshipColumn)
-        } else { 
+                .attr("value", spaceships[i].name)
+                .attr("amount", spaceships[i].amount)
+                .attr("link", spaceships[i].image)
+                .attr("data-aos", "fade-up")
+                .append(
+                    $("<img>").attr("src", spaceships[i].image)
+                        .attr("height", "70%")
+                        .attr("width", "70%")
+                )
+                .append(
+                    $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
+                )
+            $(".user-spaceship").append(spaceshipColumn)
+        } else {
             let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
-            .attr("value", spaceships[i].name)
-            .attr("amount", spaceships[i].amount)
-            .attr("link", spaceships[i].image)
-            .attr("data-aos", "fade-right")
-            .append(
-                $("<img>").attr("src", spaceships[i].image)
-                    .attr("height", "70%")
-                    .attr("width", "70%")
-            )
-            .append(
-                $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
-            )
-        $(".user-spaceship").append(spaceshipColumn)
+                .attr("value", spaceships[i].name)
+                .attr("amount", spaceships[i].amount)
+                .attr("link", spaceships[i].image)
+                .attr("data-aos", "fade-right")
+                .append(
+                    $("<img>").attr("src", spaceships[i].image)
+                        .attr("height", "70%")
+                        .attr("width", "70%")
+                )
+                .append(
+                    $("<h4>").html(`${spaceships[i].name}<br>$${spaceships[i].amount}<br><br><br>`)
+                )
+            $(".user-spaceship").append(spaceshipColumn)
         }
     }
 
-    
+
 }
 
-function createCheckout () {
+function createCheckout() {
     let lodgingImage = JSON.parse(localStorage.getItem("user-lodging-image"));
     let lodgingDescription = JSON.parse(localStorage.getItem("user-lodging"));
     let lodgingPrice = JSON.parse(localStorage.getItem("user-lodging-cost"));
@@ -552,30 +541,30 @@ function createCheckout () {
     let spaceshipPrice = JSON.parse(localStorage.getItem("user-spaceship-cost"));
 
 
-   let tableHeader = $("<tr>").append(
-                $("<th>").addClass("border-0 bg-light")
-                        .append(
-                            $("<div>").addClass("p-2 px-3 text-uppercase")
-                                        .html("Items")
-                        ),
-                $("<th>").addClass("border-0 bg-light")
-                        .append(
-                            $("<div>").addClass("p-2 px-3 text-uppercase")
-                                        .html("Description")
-                        ),
-                $("<th>").addClass("border-0 bg-light")
-                        .append(
-                            $("<div>").addClass("p-2 px-3 text-uppercase")
-                                        .html("Price")
-                        )
+    let tableHeader = $("<tr>").append(
+        $("<th>").addClass("border-0 bg-light")
+            .append(
+                $("<div>").addClass("p-2 px-3 text-uppercase")
+                    .html("Items")
+            ),
+        $("<th>").addClass("border-0 bg-light")
+            .append(
+                $("<div>").addClass("p-2 px-3 text-uppercase")
+                    .html("Description")
+            ),
+        $("<th>").addClass("border-0 bg-light")
+            .append(
+                $("<div>").addClass("p-2 px-3 text-uppercase")
+                    .html("Price")
             )
+    )
     $(".checkout-head").append(tableHeader)
 
     let newRowOne = $("<tr>").append(
         $("<td>").append(
             $("<img>").attr("src", `${lodgingImage}`)
-                        .attr("width", "160px")
-                        .attr("height", "120px"),
+                .attr("width", "160px")
+                .attr("height", "120px"),
         ),
         $("<td>").html(`${lodgingDescription}`),
         $("<td>").html(`$${lodgingPrice}`)
@@ -585,19 +574,19 @@ function createCheckout () {
     let newRowTwo = $("<tr>").append(
         $("<td>").append(
             $("<img>").attr("src", `${spaceshipImage}`)
-                        .attr("width", "160px")
-                        .attr("height", "120px"),
+                .attr("width", "160px")
+                .attr("height", "120px"),
         ),
         $("<td>").html(`${spaceshipDescription}`),
         $("<td>").html(`$${spaceshipPrice}`)
     )
     $(".checkout-body").append(newRowTwo)
-            
-        let lodgingPriceInt = parseInt(lodgingPrice);
-        let spaceshipPriceInt = parseInt(spaceshipPrice);
-        let result = lodgingPriceInt + spaceshipPriceInt;
 
-        let newRowThree = $("<tr>").append(
+    let lodgingPriceInt = parseInt(lodgingPrice);
+    let spaceshipPriceInt = parseInt(spaceshipPrice);
+    let result = lodgingPriceInt + spaceshipPriceInt;
+
+    let newRowThree = $("<tr>").append(
         $("<td>").html("Total"),
         $("<td>").html(""),
         $("<td>").html(`$${result}`)
