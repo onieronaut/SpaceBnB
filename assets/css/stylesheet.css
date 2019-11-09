@@ -124,5 +124,11 @@ table {
     margin-top: 20px;
 }
 
+.table-border{
+    margin: auto;
+    border-radius: 35px;
+    width: 60%;
+    text-align: center;
+}
 
 

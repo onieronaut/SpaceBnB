@@ -473,14 +473,11 @@ $(document).on("click", ".user-spaceship-selection", function () {
 function createSpaceships() {
     $(".user-spaceship").html("");
     $(".user-spaceship").show();
-
     let spaceshipTitle = $("<div>").addClass("col-sm-12 text-center")
         .attr("id", "anchor-here")
-        .html("<br><br><br><h3>Flight Options</h3>").addClass("choiceTxt")
+        .html("<br><br><br><h3>Looking for flight options?</h3>")
     $(".user-spaceship").append(spaceshipTitle)
-
     for (let i = 0; i < spaceships.length; i++) {
-
         if (i % 3 === 0) {
             let spaceshipColumn = $("<div>").addClass("col-sm-4 text-center user-spaceship-selection")
                 .attr("value", spaceships[i].name)
@@ -528,10 +525,7 @@ function createSpaceships() {
             $(".user-spaceship").append(spaceshipColumn)
         }
     }
-
-
 }
-
 function createTableHeader() {
     return $("<tr>").append(
         $("<th>").addClass("border-0 bg-light")
