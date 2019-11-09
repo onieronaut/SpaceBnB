@@ -34,8 +34,8 @@ let planets = [
     },
     {
         name: "Endor",
-        lodgingOne: "Fortress in the endless forest",
-        lodgingTwo: "The village",
+        lodgingOne: "Fortress in the Endless Forest",
+        lodgingTwo: "The Village",
         lodgingThree: "The Ewoks' arboreal huts",
         link: "https://starwars.fandom.com/wiki/Endor",
         wikiNum: 456136
@@ -52,15 +52,15 @@ let planets = [
         name: "Geonosis",
         lodgingOne: "Geonosian hotel",
         lodgingTwo: "The Geonosian castle",
-        lodgingThree: "The Battle of Geonosis district hotel",
+        lodgingThree: "The Battle of Geonosis District Hotel",
         link: "https://starwars.fandom.com/wiki/Geonosis",
         wikiNum: 457990
     },
     {
         name: "Hoth",
-        lodgingOne: "The Hoth observatory",
-        lodgingTwo: "The giant ice hotel",
-        lodgingThree: "Wampa hotel",
+        lodgingOne: "The Hoth Observatory",
+        lodgingTwo: "The Giant Ice Hotel",
+        lodgingThree: "Wampa Hotel",
         link: "https://starwars.fandom.com/wiki/Hoth",
         wikiNum: 451989
     },
@@ -90,7 +90,7 @@ let planets = [
     },
     {
         name: "Bespin",
-        lodgingOne: "Standard cloud city room",
+        lodgingOne: "Standard Cloud City room",
         lodgingTwo: "Upgraded room with view of the metropolis",
         lodgingThree: "Private suite with full view of the Cloud City",
         link: "https://starwars.fandom.com/wiki/Bespin",
@@ -100,7 +100,7 @@ let planets = [
         name: "Mustafar",
         lodgingOne: "Standard room with view of lava rivers",
         lodgingTwo: "Low temperature private rooms",
-        lodgingThree: "Darth Vader's fortress",
+        lodgingThree: "Fortress Vader",
         link: "https://starwars.fandom.com/wiki/Mustafar",
         wikiNum: 453226
     },
@@ -220,10 +220,6 @@ function init() {
         con.append(pre);
     }
 
-    // swapiModule.getPlanets({ page: 2 }).then(function (data) {
-    //     console.log("Result of getPlanets", data);
-    // }); 
-
     // Recieves SWAPI information by planet name and appends it to id planet-info-planetname found in modalBody
     for (let i = 0; i < planets.length; i++) {
         swapiModule.getPlanets({ search: planets[i].name }).then(function (data) {
@@ -268,13 +264,6 @@ function init() {
 
                 })
                 .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-
-            // console.log(`This is planet: ${planets[i].name}`);
-            // console.log(`climate: ${data.results[0].climate}`);
-            // console.log(`gravity: ${data.results[0].gravity}`);
-            // console.log(`population: ${data.results[0].population}`);
-            // console.log(`terrain: ${data.results[0].terrain}`);
-            // console.log(`---------------------------`)
         });
     }
 
