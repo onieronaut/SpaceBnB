@@ -563,6 +563,8 @@ function createTotalRow(total) {
         $("<td>").html(`$${total}`).addClass("tableFooter")
     );
 }
+
+// Creates checkout tables and fills in information from local storage
 function createCheckout() {
     let lodgingImage = JSON.parse(localStorage.getItem("user-lodging-image"));
     let lodgingDescription = JSON.parse(localStorage.getItem("user-lodging"));
