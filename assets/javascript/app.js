@@ -532,16 +532,8 @@ function createSpaceships() {
 
 }
 
-function createCheckout() {
-    let lodgingImage = JSON.parse(localStorage.getItem("user-lodging-image"));
-    let lodgingDescription = JSON.parse(localStorage.getItem("user-lodging"));
-    let lodgingPrice = JSON.parse(localStorage.getItem("user-lodging-cost"));
-    let spaceshipImage = JSON.parse(localStorage.getItem("user-spaceship-image"));
-    let spaceshipDescription = JSON.parse(localStorage.getItem("user-spaceship"));
-    let spaceshipPrice = JSON.parse(localStorage.getItem("user-spaceship-cost"));
-
-
-    let tableHeader = $("<tr>").append(
+function createTableHeader() {
+    return $("<tr>").append(
         $("<th>").addClass("border-0 bg-light")
             .append(
                 $("<div>").addClass("p-2 px-3 text-uppercase")
@@ -557,45 +549,53 @@ function createCheckout() {
                 $("<div>").addClass("p-2 px-3 text-uppercase")
                     .html("Price")
             )
-    )
-    $(".checkout-head").append(tableHeader)
-
-    let newRowOne = $("<tr>").append(
+    );
+}
+function createLodgingRow(image, description, price) {
+    return $("<tr>").append(
         $("<td>").append(
-            $("<img>").attr("src", `${lodgingImage}`)
+            $("<img>").attr("src", `${image}`)
                 .attr("width", "160px")
                 .attr("height", "120px"),
         ),
-        $("<td>").html(`${lodgingDescription}`),
-        $("<td>").html(`$${lodgingPrice}`)
-    )
-    $(".checkout-body").append(newRowOne)
-
-    let newRowTwo = $("<tr>").append(
+        $("<td>").html(`${description}`),
+        $("<td>").html(`$${price}`)
+    );
+}
+function createSpaceshipRow(image, description, price) {
+    return $("<tr>").append(
         $("<td>").append(
-            $("<img>").attr("src", `${spaceshipImage}`)
+            $("<img>").attr("src", `${image}`)
                 .attr("width", "160px")
                 .attr("height", "120px"),
         ),
-        $("<td>").html(`${spaceshipDescription}`),
-        $("<td>").html(`$${spaceshipPrice}`)
+        $("<td>").html(`${description}`),
+        $("<td>").html(`$${price}`)
     )
-    $(".checkout-body").append(newRowTwo)
-
-    let lodgingPriceInt = parseInt(lodgingPrice);
-    let spaceshipPriceInt = parseInt(spaceshipPrice);
-    let result = lodgingPriceInt + spaceshipPriceInt;
-
-    let newRowThree = $("<tr>").append(
+}
+function createTotalRow(total) {
+    return $("<tr>").append(
         $("<td>").html("Total"),
         $("<td>").html(""),
-        $("<td>").html(`$${result}`)
-    )
-    $(".checkout-body").append(newRowThree)
-
-
+        $("<td>").html(`$${total}`)
+    );
+}
+function createCheckout() {
+    let lodgingImage = JSON.parse(localStorage.getItem("user-lodging-image"));
+    let lodgingDescription = JSON.parse(localStorage.getItem("user-lodging"));
+    let lodgingPrice = JSON.parse(localStorage.getItem("user-lodging-cost"));
+    let spaceshipImage = JSON.parse(localStorage.getItem("user-spaceship-image"));
+    let spaceshipDescription = JSON.parse(localStorage.getItem("user-spaceship"));
+    let spaceshipPrice = JSON.parse(localStorage.getItem("user-spaceship-cost"));
+    let tableHeader = createTableHeader();
+    $(".checkout-head").append(tableHeader);
+    let lodgingRow = createLodgingRow(lodgingImage, lodgingDescription, lodgingPrice);
+    $(".checkout-body").append(lodgingRow);
+    let spaceshipRow = createSpaceshipRow(spaceshipImage, spaceshipDescription, spaceshipPrice);
+    $(".checkout-body").append(spaceshipRow);
+    let totalRow = createTotalRow(parseInt(lodgingPrice) + parseInt(spaceshipPrice));
+    $(".checkout-body").append(totalRow);
 };
-
 // Anchor to Spaceship selection
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
@@ -603,11 +603,3 @@ $(document).on('click', 'a[href^="#"]', function (event) {
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
 });
-
-
-
-
-
-
-
-
