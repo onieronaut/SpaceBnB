@@ -220,18 +220,18 @@ function init() {
         con.append(pre);
     }
 
+    function addComma(num) {
+        var num_parts = num.toString().split(".");
+        num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return num_parts.join(".");
+    }
+    function capitalize_Words(str) {
+        return str.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+    }
+
     // Recieves SWAPI information by planet name and appends it to id planet-info-planetname found in modalBody
     for (let i = 0; i < planets.length; i++) {
         swapiModule.getPlanets({ search: planets[i].name }).then(function (data) {
-            function addComma(num) {
-                var num_parts = num.toString().split(".");
-                num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                return num_parts.join(".");
-            }
-            function capitalize_Words(str) {
-                return str.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
-            }
-
             let dataResults = data.results[0]
             let planetInfo = $("<div>").html(`Climate: ${capitalize_Words(dataResults.climate)}<br>
                                                 Gravity: ${capitalize_Words(dataResults.gravity)}<br>
@@ -558,9 +558,9 @@ function createSpaceshipRow(image, description, price) {
 }
 function createTotalRow(total) {
     return $("<tr>").append(
-        $("<td>").html("Total"),
-        $("<td>").html(""),
-        $("<td>").html(`$${total}`)
+        $("<td>").html("Total").addClass("tableFooter"),
+        $("<td>").html("").addClass("tableFooter"),
+        $("<td>").html(`$${total}`).addClass("tableFooter")
     );
 }
 function createCheckout() {
