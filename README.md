@@ -1,4 +1,6 @@
-# Project1 - SpaceBnB 
+# SpaceBnB 
+
+https://onieronaut.github.io/SpaceBnB/
 
 ## About
 
